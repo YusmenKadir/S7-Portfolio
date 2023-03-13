@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.scss";
+import Home from "./components/Home";
+import IndividualProject from "./components/IndividualProject";
+import InternationalProject from "./components/InternationalProject";
+import GroupProject from "./components/GroupProject";
+import NotFound from "./components/NotFound";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/individual-project" element={<IndividualProject />}>
+          <Route path="/individual-project/project-plan" />
+          <Route path="/individual-project/process" />
+        </Route>
+        <Route
+          path="/international-project"
+          element={<InternationalProject />}
+        />
+        <Route path="/group-project" element={<GroupProject />} />
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
