@@ -132,7 +132,7 @@ const Home = () => {
               <h5>Control of noise</h5>
               <div className="call-to-action">
                 <Link>Reading Guide </Link>
-                <Link>Overview</Link>
+                <Link to="/group-project">Overview</Link>
               </div>
             </div>
           </motion.div>
@@ -167,7 +167,7 @@ const Home = () => {
               <h5>Acquired knowledge</h5>
               <div className="call-to-action">
                 <Link>Reading Guide </Link>
-                <Link>Overview</Link>
+                <Link to="/international-project">Overview</Link>
               </div>
             </div>
           </motion.div>
