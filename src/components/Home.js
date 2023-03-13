@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import myImage from "../assets/me-removebg-preview.png";
-import portFolioImage from "../assets/portfolio.avif";
-import groupImage from "../assets/globus.avif";
-import noiceImage from "../assets/ears.avif";
+import portFolioImage from "../assets/portfolio.jpg";
+import groupImage from "../assets/globus.jpg";
+import noiceImage from "../assets/ears.jpg";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { FaYoutube } from "react-icons/fa";
