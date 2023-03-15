@@ -7,6 +7,7 @@ import noiceImage from "../assets/ears.jpg";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { FaYoutube } from "react-icons/fa";
+import individualProjectReadingGuide from "../documents/Reading Guide Portfolio.pdf";
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -146,9 +147,14 @@ const Home = () => {
             <div className="overlay">
               <h2>Individual Project</h2>
               <h5>Portfolio Website</h5>
-
               <div className="call-to-action">
-                <Link>Reading Guide </Link>
+                <Link
+                  to={individualProjectReadingGuide}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Reading Guide
+                </Link>
                 <Link to="/individual-project" preventScrollReset={true}>
                   Overview
                 </Link>
