@@ -27,7 +27,16 @@ const IndividualProject = () => {
             able to stay focused, track progress, and ensure that my portfolio
             website meets my objectives and showcases my products effectively.
           </p>
-          <button className="cta-button">Read more</button>
+          <button
+            className="cta-button"
+            onClick={() =>
+              window.open(
+                "https://busy-mallet-49a.notion.site/Project-Plan-c7071a584cea4554bb735a2f0ece827d"
+              )
+            }
+          >
+            Read more
+          </button>
         </div>
         <div className="zig-zag-wrapper-img">
           <img src={projectPlanImage} alt="#" />
@@ -47,7 +56,16 @@ const IndividualProject = () => {
             resources on the web in order to find contextual information,
             guidance and best practices to answer my primary research question.
           </p>
-          <button className="cta-button">Read more</button>
+          <button
+            className="cta-button"
+            onClick={() =>
+              window.open(
+                "https://busy-mallet-49a.notion.site/Research-114f7128f09e4488b579e9a33db21973"
+              )
+            }
+          >
+            Read more
+          </button>
         </div>
       </div>
 
@@ -55,17 +73,26 @@ const IndividualProject = () => {
         <div className="zig-zag-wrapper-text">
           <h1>03.Prototype</h1>
           <p>
-            After summarizing all important conclusions from the research I
-            stepped into prototyping. First I visualized my ideas by creating
-            low fidelity prototypes. After that I continued by creating high
-            fidelity protototypes of the product. I used tools like Whimsical &
-            Figma to achieve the goal. I was able to experiment with different
-            layouts and UI elements, and refine the user experience before
-            diving into the actual development. The prototyping process helped
-            me to identify potential issues early on and make necessary
-            adjustments, saving time and effort in the long run.
+            After the research I stepped into prototyping. First I visualized my
+            ideas by creating low fidelity prototypes. After that I continued by
+            creating high fidelity protototypes of the product. I used tools
+            like Whimsical & Figma to achieve the goal. I was able to experiment
+            with different layouts and UI elements, and refine the user
+            experience before diving into the actual development. The
+            prototyping process helped me to identify potential issues early on
+            and make necessary adjustments, saving time and effort in the long
+            run.
           </p>
-          <button className="cta-button">Read more</button>
+          <button
+            className="cta-button"
+            onClick={() =>
+              window.open(
+                "https://busy-mallet-49a.notion.site/Prototype-343e5fc26d6445309a4a06c909ac185a"
+              )
+            }
+          >
+            Read more
+          </button>
         </div>
         <div className="zig-zag-wrapper-img">
           <img src={prototypingImage} alt="#" />{" "}
@@ -90,7 +117,14 @@ const IndividualProject = () => {
             effectively and efficiently develop the website, bringing my vision
             to life.
           </p>
-          <button className="cta-button">Read more</button>
+          <button
+            className="cta-button"
+            onClick={() =>
+              window.open("https://github.com/YusmenKadir/S7-Portfolio")
+            }
+          >
+            View code
+          </button>
         </div>
       </div>
 
@@ -106,7 +140,16 @@ const IndividualProject = () => {
             thorough usability testing to ensure the website is easy to use and
             navigate.
           </p>
-          <button className="cta-button">Read more</button>
+          <button
+            className="cta-button"
+            onClick={() =>
+              window.open(
+                "https://busy-mallet-49a.notion.site/Usability-test-c6040e0b863f4f37bb849cc062213217"
+              )
+            }
+          >
+            Read more
+          </button>
         </div>
         <div className="zig-zag-wrapper-img">
           <img src={testingImage} alt="#" />
@@ -128,7 +171,16 @@ const IndividualProject = () => {
             for me to learn from an experienced professional and make the
             necessary adjustments to ensure the project's success.
           </p>
-          <button className="cta-button">Read more</button>
+          <button
+            className="cta-button"
+            onClick={() =>
+              window.open(
+                "https://busy-mallet-49a.notion.site/Reflection-7905160d9974492aab7961e07ddc93ee"
+              )
+            }
+          >
+            Read more
+          </button>
         </div>
       </div>
     </div>
