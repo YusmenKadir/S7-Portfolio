@@ -170,7 +170,7 @@ const Home = () => {
             <img src={groupImage} alt="#" />
             <div className="overlay">
               <h2>International Project</h2>
-              <h5>Acquired knowledge</h5>
+              <h5>Project for Woonbedrijf</h5>
               <div className="call-to-action">
                 <Link>Reading Guide </Link>
                 <Link to="/international-project">Overview</Link>
