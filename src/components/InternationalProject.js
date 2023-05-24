@@ -412,7 +412,7 @@ const InternationalProject = () => {
             <img src={containerOneImage} alt="#" />
             <img src={containerTwoImage} alt="#" />
             <img src={containerThreeImage} alt="#" />
-            <img src={containerThreeImage} alt="#" />
+            <img src={containerFourImage} alt="#" />
           </div>
         </div>
 
