@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../App.scss";
 import internationalGroupImage from "../assets/grouppic.jpeg";
 import designThinkingImage from "../assets/designthinking.png";
@@ -21,8 +21,36 @@ import lotiSeven from "../assets/loti-app7.png";
 import lotiEight from "../assets/loti-app8.png";
 import lotiNine from "../assets/loti-app9.png";
 import lotiTen from "../assets/loti-app10.png";
+import userStoryOne from "../assets/userStory1.png";
+import userStoryTwo from "../assets/userStory2.png";
+import userStoryThree from "../assets/userStory3.png";
+import interViewQuestions from "../assets/InterviewQuestions.png";
 
 const InternationalProject = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    console.log("from useEffect");
+    const handleScroll = () => {
+      const processSection = document.querySelector(".project-process");
+      const reflectionSection = document.querySelector(".project-reflection");
+
+      if (
+        window.scrollY >= processSection.offsetTop &&
+        window.scrollY < reflectionSection.offsetTop
+      ) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const navigateToFigma = () => {
     window.open(
       "https://www.figma.com/file/dsosRtHiJOiKvVGq8b2YZJ/Woonbedrijf?type=design&node-id=0%3A1&t=lZoICC56wXlrcny5-1"
@@ -207,6 +235,33 @@ const InternationalProject = () => {
         </div>
       </div>
 
+      <div className={`sticky-header ${isSticky ? "sticky" : ""}`}>
+        <div className="box">
+          <div className="counter">1</div>
+          <div>Emphatise</div>
+        </div>
+        <div className="box">
+          <div className="counter">2</div>
+          <div>Define</div>
+        </div>
+        <div className="box">
+          <div className="counter">3</div>
+          <div>Ideation</div>
+        </div>
+        <div className="box">
+          <div className="counter">4</div>
+          <div>Prototype</div>
+        </div>
+        <div className="box">
+          <div className="counter">5</div>
+          <div>Recommendations</div>
+        </div>
+        <div className="box">
+          <div className="counter">6</div>
+          <div>Reflection</div>
+        </div>
+      </div>
+
       <div className="project-process">
         <h1>The process</h1>
         <div className="wrapper">
@@ -229,6 +284,14 @@ const InternationalProject = () => {
               Prototype and Test.
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="project-emphatise">
+        <h1>Emphatise</h1>
+        <div className="container-text"></div>
+        <div className="container-image">
+          <img src={interViewQuestions} alt="#" />
         </div>
       </div>
 
@@ -309,13 +372,36 @@ const InternationalProject = () => {
               student ID to make sure only they have access to the tool
             </p>
             <br />
+            {/* <div className="user-stories">
+              <h2>User stories</h2>
+              <div className="images">
+                <img src={userStoryOne} alt="#" />
+                <img src={userStoryTwo} alt="#" />
+                <img src={userStoryThree} alt="#" />
+              </div>
+            </div> */}
           </div>
           <div className="container-image">
-            <img src={projectPlanImage} alt="#" className="brainstorm-img" />
+            {/* <img src={projectPlanImage} alt="#" className="brainstorm-img" /> */}
+            <div className="user-stories">
+              <h2>User stories</h2>
+              <div className="images">
+                <img src={userStoryOne} alt="#" />
+                <img src={userStoryTwo} alt="#" />
+                <img src={userStoryThree} alt="#" />
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="user-stories"></div>
+        {/* <div className="user-stories">
+          <h2>User stories</h2>
+          <div className="images">
+            <img src={userStoryOne} alt="#" />
+            <img src={userStoryTwo} alt="#" />
+            <img src={userStoryThree} alt="#" />
+          </div>
+        </div> */}
       </div>
 
       <div className="project-ideation">

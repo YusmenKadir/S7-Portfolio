@@ -307,6 +307,54 @@ header .nav-btn {
 
 .international-project {
   min-height: 80vh;
+  position: relative;
+
+  .sticky-header {
+    width: 100%;
+    height: 100px;
+    background-color: #eb6f5c;
+    // background-color: #031927;
+    // position: absolute;
+    z-index: 50;
+    margin-bottom: 100px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: row;
+
+    .box {
+      margin: 0px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      // font-size: 16px;
+      text-align: center;
+
+      .counter {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .sticky-header.sticky {
+    position: fixed;
+    top: 90px;
+    width: 100%;
+    opacity: 1;
+    /* Add any additional styles for the sticky header */
+  }
 
   &-hero {
     height: 400px;
@@ -532,7 +580,7 @@ header .nav-btn {
     }
 
     .design-thinking-img:hover {
-      transform: scale(1.1);
+      // transform: scale(1.1);
     }
   }
 
@@ -589,6 +637,26 @@ header .nav-btn {
 
     .brainstorm-img:hover {
       transform: scale(1.1);
+    }
+
+    .user-stories {
+      margin: 50px 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .images {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        img {
+          margin: 20px 0;
+          transition: all 0.3s ease;
+        }
+        img:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 
@@ -761,7 +829,7 @@ header .nav-btn {
       flex-direction: column;
       margin: 50px 0;
 
-      p{
+      p {
         text-align: center;
       }
 
