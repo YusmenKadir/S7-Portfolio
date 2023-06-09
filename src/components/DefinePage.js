@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../App.scss";
 import PageIntroduction from "./PageIntroduction";
 import PrevNext from "./PrevNext";
@@ -7,7 +7,7 @@ import phaseConclusionImage from "../assets/phaseConclusion.png";
 import cmdPersonaImg from "../assets/cmdPersona.png";
 
 const DefinePage = () => {
-  const [isSticky, setIsSticky] = useState(true);
+  const [isSticky] = useState(true);
 
   // useEffect(() => {
   //   const handleScroll = () => {

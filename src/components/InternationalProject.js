@@ -31,7 +31,7 @@ import interViewQuestions from "../assets/InterviewQuestions.png";
 
 const InternationalProject = () => {
   const [isSticky, setIsSticky] = useState(false);
-  const [activeSection, setActiveSection] = useState(null);
+  const [, setActiveSection] = useState(null);
   const [isSectionVisible, setIsSectionVisible] = useState(false);
 
   const reflectionSectionRef = useRef();
@@ -57,6 +57,7 @@ const InternationalProject = () => {
     // Clean up the observer when component unmounts
     return () => {
       if (ideateSectionRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(ideateSectionRef.current);
         // setActiveSection(null);
       }
