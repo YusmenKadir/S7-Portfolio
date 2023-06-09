@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import "../App";
 import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -23,15 +23,26 @@ const AppBar = () => {
     return;
   };
 
-  const activeClassChecker = (value) => {
-    if (location.pathname === value) {
-      return "active";
-    }
+  const activeClassChecker = useCallback(
+    (value) => {
+      if (location.pathname === value) {
+        return "active";
+      }
 
-    return null;
-  };
+      // if (location.pathname.includes("/group-project")) {
+      //   return "active";
+      // }
 
-  activeClassChecker();
+      return null;
+    },
+    [location.pathname]
+  );
+
+  // activeClassChecker();
+
+  useEffect(() => {
+    console.log("navbar listening");
+  });
 
   return (
     <header>
@@ -72,6 +83,13 @@ const AppBar = () => {
           className={activeClassChecker("/international-project")}
         >
           International Project
+        </Link>
+        <Link
+          to="/documents"
+          onClick={() => navigateToPageHandler()}
+          className={activeClassChecker("/documents")}
+        >
+          Documents
         </Link>
 
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>

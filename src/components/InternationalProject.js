@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../App.scss";
 import internationalGroupImage from "../assets/grouppic.jpeg";
 import designThinkingImage from "../assets/designthinking.png";
 import lotiLogo from "../assets/loti-logo.png";
-import projectPlanImage from "../assets/reflection.png";
+import projectReflectionImage from "../assets/reflection.png";
+import projectContributionImage from "../assets/projectContribution.png";
+import stakeholderFeedbackImage from "../assets/stakeHolderFeedback.png";
+import feedbackImage from "../assets/feedbacks.png";
 import brainstormImage from "../assets/pic.jpeg";
 import { AiOutlineCheck } from "react-icons/ai";
 import containerOneImage from "../assets/container1.jpeg";
@@ -28,9 +31,102 @@ import interViewQuestions from "../assets/InterviewQuestions.png";
 
 const InternationalProject = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
+
+  const reflectionSectionRef = useRef();
+  const prototypeSectionRef = useRef();
+  const ideateSectionRef = useRef();
+  const defineSectionRef = useRef();
+  const empathiseSectionRef = useRef();
+  const recommendationsSectionRef = useRef();
 
   useEffect(() => {
-    console.log("from useEffect");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        setIsSectionVisible(entry.isIntersecting);
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
+
+    if (ideateSectionRef.current) {
+      observer.observe(ideateSectionRef.current);
+    }
+
+    // Clean up the observer when component unmounts
+    return () => {
+      if (ideateSectionRef.current) {
+        observer.unobserve(ideateSectionRef.current);
+        // setActiveSection(null);
+      }
+    };
+  }, []);
+
+  console.log(isSectionVisible);
+
+  const scrollToReflectionSection = () => {
+    setActiveSection(6);
+    if (reflectionSectionRef.current) {
+      reflectionSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  };
+  const scrollToPrototypeSection = () => {
+    setActiveSection(4);
+    if (prototypeSectionRef.current) {
+      prototypeSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  };
+  const scrollToIdeationSection = () => {
+    setActiveSection(3);
+    if (ideateSectionRef.current) {
+      ideateSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  };
+  const scrollToDefineSection = () => {
+    setActiveSection(2);
+    if (defineSectionRef.current) {
+      defineSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  };
+  const scrollToEmpathiseSection = () => {
+    setActiveSection(1);
+    if (empathiseSectionRef.current) {
+      empathiseSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  };
+  const scrollToRecommendationSection = () => {
+    setActiveSection(5);
+    if (recommendationsSectionRef.current) {
+      recommendationsSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  };
+
+  useEffect(() => {
     const handleScroll = () => {
       const processSection = document.querySelector(".project-process");
       const reflectionSection = document.querySelector(".project-reflection");
@@ -51,6 +147,7 @@ const InternationalProject = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const navigateToFigma = () => {
     window.open(
       "https://www.figma.com/file/dsosRtHiJOiKvVGq8b2YZJ/Woonbedrijf?type=design&node-id=0%3A1&t=lZoICC56wXlrcny5-1"
@@ -65,9 +162,6 @@ const InternationalProject = () => {
       </div>
 
       <div className="project-intro">
-        <div className="intro-img">
-          <img src={internationalGroupImage} alt="#" />
-        </div>
         <div className="intro-heading">
           <h1>Introduction</h1>
           <p>
@@ -78,25 +172,30 @@ const InternationalProject = () => {
             encourage students to share their unique perspectives on the core
             values of the LOT community—a community being developed by Vestide
             as part of the construction of 735 student apartments on the TU/e
-            campus, set to be completed in July 2024. Our objective was to
-            devise an innovative approach that would stimulate students to
-            contribute their ideas and interpretations of the core values,
-            fostering a sense of ownership and collaboration in shaping the
-            future of the new student housing. As we worked on this project, we
-            aimed to design a visually captivating and engaging tool that would
-            be prominently displayed at the TUE campus, serving as a platform
-            where students could express their thoughts in a manner that
-            inspires and resonates with others.
+            campus, set to be completed in July 2024.
           </p>
+
+          <p>
+            {" "}
+            Our objective was to devise an innovative approach that would
+            stimulate students to contribute their ideas and interpretations of
+            the core values, fostering a sense of ownership and collaboration in
+            shaping the future of the new student housing. As we worked on this
+            project, we aimed to design a visually captivating and engaging tool
+            that would be prominently displayed at the TUE campus, serving as a
+            platform where students could express their thoughts in a manner
+            that inspires and resonates with others.
+          </p>
+        </div>
+
+        <div className="intro-img">
+          <img src={internationalGroupImage} alt="#" />
         </div>
       </div>
 
       <div className="project-contributions">
         <h1>My contributions</h1>
         <div className="contributions-wrapper">
-          <div>
-            <img src={projectPlanImage} alt="#" />
-          </div>
           <div className="contributions-container">
             <h4>
               <span>
@@ -126,20 +225,19 @@ const InternationalProject = () => {
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
+              Conducted interview with student
+            </h4>
+            <h4>
+              <span>
+                <AiOutlineCheck size={20} color="#eb6f5c" />
+              </span>
               Created avatar visuals in the mobile prototype
             </h4>
             <h4>
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
-              Created 50% of the mobile prototype
-            </h4>
-
-            <h4>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Conducted interview with student
+              Worked on the mobile prototype
             </h4>
 
             <h4>
@@ -148,6 +246,18 @@ const InternationalProject = () => {
               </span>
               Brainstormed potential solutions
             </h4>
+            <h4>
+              <span>
+                <AiOutlineCheck size={20} color="#eb6f5c" />
+              </span>
+              Created User Stories
+            </h4>
+            <h4>
+              <span>
+                <AiOutlineCheck size={20} color="#eb6f5c" />
+              </span>
+              Created posters
+            </h4>
 
             <h4>
               <span>
@@ -155,19 +265,9 @@ const InternationalProject = () => {
               </span>
               Helped with documentation
             </h4>
-
-            <h4>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Created posters
-            </h4>
-            <h4>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Created User Stories
-            </h4>
+          </div>
+          <div>
+            <img src={projectContributionImage} alt="#" />
           </div>
         </div>
       </div>
@@ -193,13 +293,6 @@ const InternationalProject = () => {
             <div className="problem-statement-container">
               <h2>Problem statement</h2>
               <p>
-                {/* The project focuses on gaining insight from the students on
-                campus on what they think about the core values of the LOT
-                community, as well as including them in building this community
-                through a series of experiences during the construction of the
-                new apartment complex. The installation invites people to
-                participate in person, mainly to share and discuss their ideas
-                of the core values and anything else that builds the community.{" "} */}
                 How might we create an interactive tool that gains insights from
                 the students for LOT, and also raises awareness about the
                 community?
@@ -210,8 +303,8 @@ const InternationalProject = () => {
               <h3>Proposed solution</h3>
               <p>
                 An event where the students come to the location and in the
-                containers an AI avatar that interviews the people. There will
-                be a couple of avatars to choose from based on different themes.{" "}
+                containers an AI avatar interviews the people. There will be a
+                couple of avatars to choose from based on different themes.{" "}
               </p>
               <h4>In person</h4>
               <p>
@@ -236,29 +329,59 @@ const InternationalProject = () => {
       </div>
 
       <div className={`sticky-header ${isSticky ? "sticky" : ""}`}>
-        <div className="box">
+        <div className="box" onClick={scrollToEmpathiseSection}>
           <div className="counter">1</div>
-          <div>Emphatise</div>
+          <div className="phase-name">Emphatise</div>
         </div>
-        <div className="box">
+        <div className="box" onClick={scrollToDefineSection}>
           <div className="counter">2</div>
-          <div>Define</div>
+          <div className="phase-name">Define</div>
         </div>
-        <div className="box">
+        <div className="box" onClick={scrollToIdeationSection}>
           <div className="counter">3</div>
-          <div>Ideation</div>
+          <div className="phase-name">Ideation</div>
         </div>
-        <div className="box">
+        <div className="box" onClick={scrollToPrototypeSection}>
           <div className="counter">4</div>
-          <div>Prototype</div>
+          <div className="phase-name">Prototype</div>
         </div>
-        <div className="box">
+        <div className="box" onClick={scrollToRecommendationSection}>
           <div className="counter">5</div>
-          <div>Recommendations</div>
+          <div className="phase-name">Recommendations</div>
         </div>
-        <div className="box">
+        <div className="box" onClick={scrollToReflectionSection}>
           <div className="counter">6</div>
-          <div>Reflection</div>
+          <div className="phase-name">Reflection</div>
+        </div>
+      </div>
+
+      <div className="project-feedback">
+        <h1>Feedback from Stakeholder</h1>
+        <div className="wrapper">
+          <div className="container-text">
+            <p>
+              As part of the international project, I took the initiative to
+              track and document feedback from stakeholders. By actively
+              engaging with students, team members, and other relevant
+              individuals, I collected their opinions, suggestions, and overall
+              impressions of the project. This valuable feedback has been
+              instrumental in guiding our project's development, helping us
+              refine our ideas and align our efforts. By prioritizing effective
+              communication and collaboration, I ensured that stakeholders'
+              voices were heard and their perspectives were valued.
+            </p>
+
+            <div className="image">
+              <img src={feedbackImage} alt="#" />
+            </div>
+          </div>
+          <div className="container-image">
+            <img
+              src={stakeholderFeedbackImage}
+              alt="#"
+              className="feedback-stakeholder-img"
+            />
+          </div>
         </div>
       </div>
 
@@ -287,36 +410,102 @@ const InternationalProject = () => {
         </div>
       </div>
 
-      <div className="project-emphatise">
+      <div className="project-emphatise" ref={empathiseSectionRef}>
         <h1>Emphatise</h1>
-        <div className="container-text"></div>
-        <div className="container-image">
-          <img src={interViewQuestions} alt="#" />
+        <div className="wrapper">
+          <div className="container-image">
+            <img src={interViewQuestions} alt="#" />
+          </div>
+          <div className="container-text">
+            <p>
+              During the empathise phase, we conducted interviews to gain
+              insights into how people prefer to share their opinions and what
+              factors influence their willingness to participate.{" "}
+            </p>
+            <p>
+              Before conducting the user interviews, our team engaged in a
+              collaborative brainstorming session to develop the interview
+              questions. We recognized the significance of gathering diverse
+              perspectives, so each team member contributed their input and
+              proposed questions. As part of this process, I shared my own
+              suggestions, and a couple of my proposed questions were selected
+              to be included in the final set of interview questions.
+            </p>
+
+            <p>
+              The interview questions we formulated aimed to uncover insights
+              into how individuals prefer to share their opinions, what factors
+              make them comfortable expressing their thoughts on specific topics
+              or problems, and their preferences for feedback and validation of
+              their input. Here are some of the questions we used during the
+              interviews:
+            </p>
+
+            <p>
+              <b>1.How do you prefer to share your opinions?</b>
+            </p>
+            <p>
+              <b>
+                2.What makes you comfortable sharing your opinion about a
+                certain topic or problem?
+              </b>
+            </p>
+            <p>
+              <b>
+                3.After providing feedback, would you like to see your results
+                compared to others?
+              </b>
+            </p>
+            <p>
+              <b>4.What makes you feel your opinion is valued and important?</b>
+            </p>
+            <p>
+              <b>5.What makes you NOT want to fill out a survey?</b>
+            </p>
+
+            <p>
+              From these interviews, we learned that individuals feel more
+              comfortable sharing their opinions in person, especially when they
+              have strong beliefs, are in a welcoming environment, and are
+              personally interested in the topic. They also expressed a desire
+              for instant feedback or results from their answers.
+            </p>
+            <p>
+              Based on these findings, we recognized the importance of creating
+              an interactive and engaging tool that encourages participation and
+              provides real-time feedback. We understood that lengthy surveys
+              with dull designs, irrelevant or confusing questions, can deter
+              individuals from sharing their thoughts. Therefore, we aimed to
+              develop a user-friendly tool that captures attention, keeps
+              surveys short and visually appealing, and ensures clarity in
+              questionnaires.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="project-define">
+      <div className="project-define" ref={defineSectionRef}>
         <h1>Define</h1>
 
         <div className="wrapper">
           <div className="container-text">
-            <h4>What problem we are solving?</h4>
+            <h3>What problem we are solving?</h3>
             <p>
-              <span>(User)</span> needs to <span>(user’s need)</span> because
-              <span> (insight)</span>.
+              <span>(User)</span> needs to <span> (user’s need) </span> because
+              <span> (insight) </span>.
             </p>
             <p>
               Residents of the campus need to be able to share opinions because
               it will shape the building and environment around it.
             </p>
-            <h4>Problem statement</h4>
+            <h3>Problem statement</h3>
             <p>
               How might we create an interactive tool that gains insights from
               the students for LOT, and also raises awareness about the
               community?
             </p>
             <br />
-            <h4>Sub-questions:</h4>
+            <h3>Sub-questions:</h3>
             <br />
             <p>
               1. How might we make the users want to take part in the
@@ -332,7 +521,6 @@ const InternationalProject = () => {
               2. How might we make sure the users feel their opinions heard and
               understood?
             </p>
-            <br />
             <p>
               Answer: By giving them a reaction & showing them their results
             </p>
@@ -372,19 +560,10 @@ const InternationalProject = () => {
               student ID to make sure only they have access to the tool
             </p>
             <br />
-            {/* <div className="user-stories">
-              <h2>User stories</h2>
-              <div className="images">
-                <img src={userStoryOne} alt="#" />
-                <img src={userStoryTwo} alt="#" />
-                <img src={userStoryThree} alt="#" />
-              </div>
-            </div> */}
           </div>
           <div className="container-image">
-            {/* <img src={projectPlanImage} alt="#" className="brainstorm-img" /> */}
             <div className="user-stories">
-              <h2>User stories</h2>
+              <h3>User stories</h3>
               <div className="images">
                 <img src={userStoryOne} alt="#" />
                 <img src={userStoryTwo} alt="#" />
@@ -393,18 +572,9 @@ const InternationalProject = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="user-stories">
-          <h2>User stories</h2>
-          <div className="images">
-            <img src={userStoryOne} alt="#" />
-            <img src={userStoryTwo} alt="#" />
-            <img src={userStoryThree} alt="#" />
-          </div>
-        </div> */}
       </div>
 
-      <div className="project-ideation">
+      <div className="project-ideation" ref={ideateSectionRef}>
         <h1>Ideation</h1>
         <div className="wrapper">
           <div className="container-text">
@@ -465,7 +635,7 @@ const InternationalProject = () => {
         </div>
       </div>
 
-      <div className="project-prototype">
+      <div className="project-prototype" ref={prototypeSectionRef}>
         <h1>Prototype</h1>
 
         <div className="moodboard-container">
@@ -478,11 +648,14 @@ const InternationalProject = () => {
               Before stepping into prototyping the mobile app itself we created
               a moodboard seen on the left side. This moodboard contains some
               inspirational designs that we implemented into the prototype. I
-              created all of the avatar visuals using an AI tool. Beside that I
+              created some of the avatar visuals using an AI tool. Beside that I
               also designed the main poster and the secondary poster that might
               be put on location to attract the attention of the passing
-              students.Overall, the moodboard was an invaluable tool that not
-              only inspired us but also guided our creative decisions as we
+              students.
+            </p>
+            <p>
+              Overall, the moodboard was an invaluable tool that not only
+              inspired us but also guided our creative decisions as we
               progressed towards developing an interactive solution. It provided
               a tangible and visually captivating foundation for our prototyping
               efforts, helping us stay focused on the intended user experience
@@ -529,21 +702,26 @@ const InternationalProject = () => {
         </div>
       </div>
 
-      <div className="project-recommendations">
+      <div className="project-recommendations" ref={recommendationsSectionRef}>
         <h1>Recommendations</h1>
         <div className="wrapper">
-          <div className="recommendations-img">
+          {/* <div className="recommendations-img">
             <img src={projectPlanImage} alt="#" />
-          </div>
+          </div> */}
           <div className="recommendations-text">
             <p>
               As a group, we aimed to deliver a concept that can be taken over
               and implemented in the real world by the stakeholder. We believe
               the concept has great potential to attract student attention and
-              help with building up the community of LOT.{" "}
+              help with building up the community of LOT.
             </p>
 
-            <p>Here are some further recommendations:</p>
+            <p>
+              We thought about further recommendations that would enhance the
+              user experience. I also provided my input here by proposing some
+              of the listed recommendations below. Here is a full list of
+              recommendations we came up with:
+            </p>
             <p>
               <span>
                 {" "}
@@ -647,7 +825,7 @@ const InternationalProject = () => {
         </div>
       </div>
 
-      <div className="project-reflection">
+      <div className="project-reflection" ref={reflectionSectionRef}>
         <h1>Reflection</h1>
         <div className="wrapper">
           <div className="reflection-text">
@@ -659,18 +837,21 @@ const InternationalProject = () => {
               I create improves my prototyping skills, so working with my
               colleague Wolf on the mobile prototype really helped me achieve
               that. Also, this project helped me work on my soft skills such as
-              communication and leadership. From the beginning of the project to
-              the end, I tried to be proactive and help my other colleagues to
-              open up and share their ideas. The little time we had for work, on
-              the other hand, helped me develop a valuable skill, which is being
-              able to handle difficult tasks in a relatively short time. I think
-              this is a very important skill for the workplace I will be in the
-              coming years. Overall, this project was a good experience and I'm
-              glad I had the opportunity to be a part of it.
+              communication and leadership.
+            </p>
+            <p>
+              From the beginning of the project to the end, I tried to be
+              proactive and help my other colleagues to open up and share their
+              ideas. The little time we had for work, on the other hand, helped
+              me develop a valuable skill, which is being able to handle
+              difficult tasks in a relatively short time. I think this is a very
+              important skill for the workplace I will be in the coming years.
+              Overall, this project was a good experience and I'm glad I had the
+              opportunity to be a part of it.
             </p>
           </div>
           <div className="reflection-img">
-            <img src={projectPlanImage} alt="#" />
+            <img src={projectReflectionImage} alt="#" />
           </div>
         </div>
       </div>
