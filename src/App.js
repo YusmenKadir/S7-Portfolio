@@ -14,6 +14,14 @@ import IdeatePage from "./components/IdeatePage";
 import PrototypePage from "./components/PrototypePage";
 import TestPage from "./components/TestPage";
 import SoftwarePage from "./components/SoftwarePage";
+import ReflectionPage from "./components/ReflectionPage";
+import PeerReviewPage from "./components/PeerReviewPage";
+import StakeholderAppreciationPage from "./components/StakeholderAppreciation";
+import RecommendationsPage from "./components/RecommendationsPage";
+import PortfilioResearchPage from "./components/PortfilioResearchPage";
+import PortfilioReflectionPage from "./components/PortfolioReflectionPage";
+import PortfolioTestPage from "./components/PortfolioTestPage";
+import PortfolioPrototypePage from "./components/PortfolioPrototypePage";
 
 function App() {
   return (
@@ -21,10 +29,24 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/individual-project" element={<IndividualProject />}>
-          <Route path="/individual-project/project-plan" />
-          <Route path="/individual-project/process" />
-        </Route>
+        <Route
+          path="/individual-project"
+          element={<IndividualProject />}
+        ></Route>
+        <Route path="/individual-project/project-plan" />
+        <Route
+          path="/individual-project/research"
+          element={<PortfilioResearchPage />}
+        />
+        <Route path="/individual-project/prototype" element={<PortfolioPrototypePage/>}/>
+        <Route
+          path="/individual-project/reflection"
+          element={<PortfilioReflectionPage />}
+        />
+        <Route
+          path="/individual-project/test"
+          element={<PortfolioTestPage />}
+        />
         <Route
           path="/international-project"
           element={<InternationalProject />}
@@ -38,6 +60,16 @@ function App() {
         <Route
           path="/group-project/software-system"
           element={<SoftwarePage />}
+        />
+        <Route path="/group-project/reflection" element={<ReflectionPage />} />
+        <Route path="/group-project/peer-review" element={<PeerReviewPage />} />
+        <Route
+          path="/group-project/stakeholder-appreciation"
+          element={<StakeholderAppreciationPage />}
+        />
+        <Route
+          path="/group-project/project-recommendations"
+          element={<RecommendationsPage />}
         />
 
         <Route path="/documents" element={<DocumentsPage />} />

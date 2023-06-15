@@ -18,10 +18,19 @@ const EmpathisePage = () => {
 
   const location = useLocation();
   const literatureStudyRef = useRef(null);
+  const docAnalysisRef = useRef(null);
+  const interviewRef = useRef(null);
 
   useEffect(() => {
     if (location.hash === "#literature-study" && literatureStudyRef.current) {
       literatureStudyRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (location.hash === "#user-interview" && interviewRef.current) {
+      interviewRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#doc-analysis" && docAnalysisRef.current) {
+      docAnalysisRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
   return (
@@ -36,7 +45,7 @@ const EmpathisePage = () => {
         learningOutcome="Learning outcome 1: User interaction (analysis & advice)"
       />
 
-      <div className={`sticky-header ${isSticky ? "sticky" : ""}`}>
+      {/* <div className={`sticky-header ${isSticky ? "sticky" : ""}`}>
         <div>Jump to phase</div>
         <div className="box">
           <div className="counter">1</div>
@@ -74,7 +83,7 @@ const EmpathisePage = () => {
           <div className="counter">9</div>
           <div className="phase-name">Reflection</div>
         </div>
-      </div>
+      </div> */}
 
       <div className="emphatise-page-lstudy" ref={literatureStudyRef}>
         <h1>Literature study</h1>
@@ -97,10 +106,9 @@ const EmpathisePage = () => {
 
             <h2>Question</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              How can the principles of human factors and ergonomics be
+              integrated to create products and services that are usable, safe,
+              and comfortable for a diverse range of users?
             </p>
 
             <div className="method-date-keywords-wrapper">
@@ -137,43 +145,48 @@ const EmpathisePage = () => {
 
             <h2>Results</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Human factors and ergonomics principles focus on understanding how
+              people interact with technology, products, and services. To
+              integrate these principles into our design, we can take the
+              following steps:
             </p>
 
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              1.We should understand user needs and characteristics: We should
+              conduct research to gain an understanding of their users needs,
+              abilities, limitations, and preferences. This information can be
+              gathered through user interviews, surveys, and observations.
+            </p>
+
+            <p>
+              2.We should incorporate user-centered design: The design process
+              should be focused on the user, incorporating their feedback
+              throughout the development process. This can include user testing
+              and prototyping.
+            </p>
+
+            <p>
+              3.We should optimize usability: We should aim to create a product
+              that is easy to use and navigate, with clear instructions and
+              feedback.{" "}
+            </p>
+            <p>
+              4.We should consider comfort: Our product should be designed to be
+              comfortable and ergonomic. This can involve designing a product
+              that fit a range of body types and sizes and minimizing strain on
+              the user's body.
+            </p>
+
+            <p>
+              5.We should account for diversity: We have to consider the needs
+              of diverse users, including those with disabilities, different
+              cultural backgrounds, and different levels of technical expertise.
             </p>
 
             <h2>Conclusion</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              By integrating these principles we can create a product that is
+              user-friendly, safe, and comfortable for a diverse range of users.
             </p>
 
             <h2>Research sources</h2>
@@ -207,7 +220,7 @@ const EmpathisePage = () => {
           </div>
         </div>
       </div>
-      <div className="emphatise-page-docanalysis">
+      <div className="emphatise-page-docanalysis" ref={docAnalysisRef}>
         <h1>Document Analysis</h1>
         <div className="wrapper">
           <div className="container-image">
@@ -327,7 +340,7 @@ const EmpathisePage = () => {
           </div>
         </div>
       </div>
-      <div className="emphatise-page-interview">
+      <div className="emphatise-page-interview" ref={interviewRef}>
         <h1>User Interview</h1>
         <div className="wrapper">
           <div className="container-image">

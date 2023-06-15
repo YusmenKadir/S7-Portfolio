@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import myImage from "../assets/me-removebg-preview.png";
-import portFolioImage from "../assets/portfolio.jpg";
-import groupImage from "../assets/globus.jpg";
-import noiceImage from "../assets/ears.jpg";
+import portFolioImage from "../assets/website-solution.png";
+import groupImage from "../assets/LotiIcon.png";
+import watchImage from "../assets/Watches.png";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { FaYoutube } from "react-icons/fa";
@@ -127,7 +127,7 @@ const Home = () => {
             variants={projectVariants}
             animate={inView ? "visible" : "hidden"}
           >
-            <img src={noiceImage} alt="#" />
+            <img src={watchImage} alt="#" />
             <div className="overlay">
               <h2>Group Project</h2>
               <h5>Control of noise</h5>

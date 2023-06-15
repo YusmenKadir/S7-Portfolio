@@ -1,0 +1,142 @@
+// ideate page
+
+.ideate-page {
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fdfdfd;
+
+  &-outcomes {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 16px;
+    margin: 200px 0;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .wrapper-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-evenly;
+      text-align: center;
+      // flex-direction: column;
+      // border: 1px solid red;
+      color: black;
+      background-color: #f1f1f0;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 20px 0;
+      width: 300px;
+      height: 300px;
+      // flex: 1;
+      width: 50%;
+      border .icon {
+        margin: 50px 0;
+      }
+
+      .box {
+        margin: 20px 10px;
+      }
+    }
+
+    .wrapper-text {
+      // flex: 1;
+      // border: 1px solid red;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 70%;
+      p {
+        width: 90%;
+        text-align: left;
+        margin: 20px 0;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-moscow,
+  &-moodboard,
+  &-flows,
+  &-sketches {
+    margin: 200px 0;
+    // min-height: 50vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .wrapper {
+      display: flex;
+      //   border: 1px solid red;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+      //   flex-direction: column;
+      width: 100%;
+
+      // border: 1px solid red;
+    }
+
+    .container-image {
+      //   border: 1px solid red;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      // border: 1px solid red;
+      width: 90%;
+      margin: 30px 0;
+
+      img {
+        width: 90%;
+        object-fit: contain;
+      }
+
+      iframe {
+        width: 90%;
+        height: 500px;
+        border: 2px solid #eb6f5c;
+        border-radius: 5px;
+      }
+    }
+    .container-text {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      //   text-align: center;
+
+      .method {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #eb6f5c;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 10px 0;
+        text-align: left;
+      }
+    }
+
+    h2 {
+      margin: 20px 0;
+    }
+  }
+}

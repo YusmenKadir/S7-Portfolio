@@ -4,12 +4,13 @@ import "../App.scss";
 import reflectionImage from "../assets/reflection.png";
 import prototypingImage from "../assets/watchImage.png";
 import appreciationImg from "../assets/appreciationImg.png";
-
+import peerReviewImg from "../assets/PeerReviewImg.png";
 import designThinkingImage from "../assets/designthinking.png";
+// import watchImage from "../assets/Watches.png";
 import designerImage from "../assets/designer.png";
 import timemanagementImage from "../assets/timemanagement.png";
 import groupImage from "../assets/team.png";
-import solutionImg from "../assets/Decibelle.png";
+import solutionImg from "../assets/Watches.png";
 import empathiseImg from "../assets/empathiseImage.png";
 import defineImg from "../assets/defineImage.png";
 import ideateImg from "../assets/ideateImage.png";
@@ -46,6 +47,22 @@ const GroupProject = () => {
 
   const navigateToSoftwarePage = () => {
     navigate("/group-project/software-system");
+  };
+
+  const navigateToRecommendationsPage = () => {
+    navigate("/group-project/project-recommendations");
+  };
+
+  const navigateToPeerReviewPage = () => {
+    navigate("/group-project/peer-review");
+  };
+
+  const navigateToAppreciationPage = () => {
+    navigate("/group-project/stakeholder-appreciation");
+  };
+
+  const navigateToReflectionPage = () => {
+    navigate("/group-project/reflection");
   };
 
   return (
@@ -239,24 +256,32 @@ const GroupProject = () => {
                 Literature study
               </p>
             </Link>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Document analysis
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              User Interview
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Survey
-            </p>
+            <Link to="/group-project/empathise#doc-analysis">
+              {" "}
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Document analysis
+              </p>
+            </Link>
+            <Link to="/group-project/empathise#user-interview">
+              {" "}
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                User interview
+              </p>
+            </Link>
+            <Link to="/group-project/empathise#survey">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Survey
+              </p>
+            </Link>
 
             <p>
               These efforts enabled me to contribute meaningful data and
@@ -292,24 +317,19 @@ const GroupProject = () => {
               including:
             </p>
 
-            <p>
+            {/* <p>
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
               Problem analysis
-            </p>
+            </p> */}
             <p>
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
               Persona
             </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Customer Journey Map
-            </p>
+
             <p>
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
@@ -369,7 +389,7 @@ const GroupProject = () => {
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
-              UI Mood board
+              UI Moodboard
             </p>
 
             <p>
@@ -494,18 +514,52 @@ const GroupProject = () => {
 
             <p>My contributions here were focused on:</p>
 
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              System context diagram
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Container diagram
-            </p>
+            <Link to="/group-project/software-system#system-context">
+              {" "}
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                System context diagram C1
+              </p>
+            </Link>
+            <Link to="/group-project/software-system#container-diagram">
+              {" "}
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Container diagram C2
+              </p>
+            </Link>
+
+            <Link to="/group-project/software-system#individual-component-diagram">
+              {" "}
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Individual Component diagram C3
+              </p>
+            </Link>
+            <Link to="/group-project/software-system#group-component-diagram">
+              {" "}
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Group Component diagram C3
+              </p>
+            </Link>
+            <Link to="/group-project/software-system#software-libraries">
+              {" "}
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Software libraries research
+              </p>
+            </Link>
 
             <p>
               Click the button below to explore the Software System Design
@@ -519,7 +573,7 @@ const GroupProject = () => {
       </div>
 
       {/* recommendations section  */}
-      <div className="group-project-recommendations">
+      {/* <div className="group-project-recommendations">
         <h1>Recommendations</h1>
         <div className="wrapper">
           <div className="container-text">
@@ -529,27 +583,27 @@ const GroupProject = () => {
               throughout the project. This section serves as a place to share my
               thoughts and suggestions for further improvements and future
               iterations.
-            </p>
+            </p> */}
 
-            {/* <p>
+      {/* <p>
               To assist the team in gaining valuable insights, I took the
               initiative to perform various activities such as:
             </p> */}
 
-            {/* <p>
+      {/* <p>
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
               Project Recommendations
             </p> */}
 
-            <p>
+      {/* <p>
               By exploring the Project Recommendations section, you can gain
               valuable insights into the lessons learned and the suggested steps
               to further refine and optimize our project.
             </p>
 
-            <button>Read more</button>
+            <button onClick={navigateToRecommendationsPage}>Read more</button>
           </div>
           <div className="container-image">
             <img
@@ -559,7 +613,7 @@ const GroupProject = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* appreciation section  */}
       <div className="group-project-appreciation">
         <h1>Stakeholder appreciation</h1>
@@ -573,27 +627,20 @@ const GroupProject = () => {
           </div>
           <div className="container-text">
             <p>
-              In the Stakeholder Appreciation section, I have gathered feedback
-              from both the stakeholders and my peers regarding my participation
-              and contribution to the project. This section aims to showcase
-              their appreciation and evaluation of my performance throughout the
-              project.
+              In the Stakeholder pppreciation section, I have gathered feedback
+              from the stakeholder regarding my participation and contribution
+              to the project. This section aims to showcase his appreciation and
+              evaluation of my performance throughout the project.
             </p>
 
-            <p>Here you can read about the following:</p>
+            {/* <p>Here you can read about the following:</p>
 
             <p>
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
               Stakeholder appreciation
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Peer review
-            </p>
+            </p> */}
 
             {/* <p>
               The feedback from stakeholders and teammates provides valuable
@@ -601,10 +648,33 @@ const GroupProject = () => {
               the project. Click the button below to explore more.
             </p> */}
 
-            <button>Read more</button>
+            <button onClick={navigateToAppreciationPage}>Read more</button>
           </div>
         </div>
       </div>
+
+      {/* Peer review */}
+
+      <div className="group-project-peerreview">
+        <h1>Peer review</h1>
+        <div className="wrapper">
+          <div className="container-image">
+            <img src={peerReviewImg} alt="#" className="design-thinking-img" />
+          </div>
+          <div className="container-text">
+            <p>
+              In the Peer review section, I have gathered feedback from my peers
+              regarding my participation and contribution to the project. This
+              section aims to showcase their appreciation and evaluation of my
+              performance throughout the project.
+            </p>
+
+            <button onClick={navigateToPeerReviewPage}>Read more</button>
+          </div>
+        </div>
+      </div>
+
+      {/* project reflection */}
       <div className="group-project-reflection">
         <h1>Reflection</h1>
         <div className="wrapper">
@@ -618,7 +688,7 @@ const GroupProject = () => {
               read more about that!
             </p>
 
-            <button>Read more</button>
+            <button onClick={navigateToReflectionPage}>Read more</button>
           </div>
           <div className="container-image">
             <img

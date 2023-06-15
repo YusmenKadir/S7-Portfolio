@@ -41,7 +41,7 @@ const DefinePage = () => {
         enjoy reading!"
         learningOutcome="Learning outcome 1: User interaction (analysis & advice)"
       />
-      <div className={`sticky-header ${isSticky ? "sticky" : ""}`}>
+      {/* <div className={`sticky-header ${isSticky ? "sticky" : ""}`}>
         <div>Jump to phase</div>
         <div className="box">
           <div className="counter">1</div>
@@ -79,7 +79,7 @@ const DefinePage = () => {
           <div className="counter">9</div>
           <div className="phase-name">Reflection</div>
         </div>
-      </div>
+      </div> */}
       {/* <div className="define-page-problemanalysis">
         <h1>Problem analysis</h1>
         <div className="wrapper">
@@ -454,7 +454,7 @@ const DefinePage = () => {
           </div>
         </div>
       </div> */}
-
+      {/* 
       <div className="define-page-conclusion">
         <h1>Define phase conclusion</h1>
         <div className="wrapper">
@@ -492,7 +492,7 @@ const DefinePage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       <PrevNext
         nextLink="/group-project/ideate"
         previousLink="/group-project/empathise"
