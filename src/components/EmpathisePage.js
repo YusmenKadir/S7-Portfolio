@@ -11,6 +11,10 @@ import reviewedDocsImage from "../assets/reviewedDocsImg.png";
 import cdmInterviewImg from "../assets/cmdInterview.png";
 import cmdSurveyImg from "../assets/cmdSurveyImg.png";
 import customerSurveyImg from "../assets/customerSurveyImg.png";
+import documentOne from "../documents/Grip Samevatting Focusgroepen.pdf";
+import documentTwo from "../documents/Grip Student Ervaring Gehoorbescherming.pdf";
+import documentThree from "../documents/Grip Student Klachten.pdf";
+import documentFour from "../documents/Grip Student Overige Klachten.pdf";
 import { useLocation } from "react-router";
 
 const EmpathisePage = () => {
@@ -33,6 +37,22 @@ const EmpathisePage = () => {
       docAnalysisRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
+
+  const openFirstDoc = () => {
+    window.open(documentOne, "_blank");
+  };
+
+  const openSecondDoc = () => {
+    window.open(documentTwo, "_blank");
+  };
+
+  const openThirdDoc = () => {
+    window.open(documentThree, "_blank");
+  };
+
+  const openFourthDoc = () => {
+    window.open(documentFour, "_blank");
+  };
   return (
     <div className="emphatise-page">
       <PageIntroduction
@@ -98,10 +118,10 @@ const EmpathisePage = () => {
           <div className="container-text">
             <h2> Introduction</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              I started this phase by conducting literature study in order to
+              answer this hard question. I was determined to provide the best
+              answer possible despite the challenges I encountered in finding
+              good research sources on this topic.
             </p>
 
             <h2>Question</h2>
@@ -111,22 +131,46 @@ const EmpathisePage = () => {
               and comfortable for a diverse range of users?
             </p>
 
+            <h2>Why</h2>
+            <p>
+              The literature study I conducted was important because it taught
+              me about the important steps we needed to take to create a good
+              product at the end of our journey. Armed with this knowledge, I
+              tried to highlight the important points to my colleagues so that
+              we would be on the same page during our process.
+            </p>
+
+            <h2>How</h2>
+
+            <p>
+              I used google search engine by typing search keywords. I found a
+              couple of informational sources. I pieced together all information
+              from the resources to formulate my answer.
+            </p>
+
             <div className="method-date-keywords-wrapper">
               <div>
                 <h2>Method</h2>
                 <img src={literaturecmdImg} alt="#" />
               </div>
-              <div>
+              {/* <div>
                 <h2>Search date</h2>
                 <BsCalendar3 size={50} />
                 <span>23.03.2023</span>
-              </div>
+              </div> */}
               <div>
                 <h2>Search keywords</h2>
                 <BsKeyboard size={50} />
-                <span className="chip">Key word 1</span>
-                <span className="chip">keyword 2</span>
-                <span className="chip">keyword 3</span>
+                <span className="chip">
+                  human factors and ergonomics in digital product design
+                </span>
+                <span className="chip">
+                  What are human factors and ergonomics
+                </span>
+                <span className="chip">
+                  how to integrate human factors and ergonomics in smart watch
+                  design
+                </span>
                 {/* <span className="chip">
                   How to integrate human factors and ergonomics in digital
                   products?
@@ -152,70 +196,54 @@ const EmpathisePage = () => {
             </p>
 
             <p>
-              1.We should understand user needs and characteristics: We should
-              conduct research to gain an understanding of their users needs,
-              abilities, limitations, and preferences. This information can be
-              gathered through user interviews, surveys, and observations.
+              First we should aim to understand the needs and characteristics of
+              the users. We should conduct research to understand their needs
+              and preferences.
             </p>
 
             <p>
-              2.We should incorporate user-centered design: The design process
-              should be focused on the user, incorporating their feedback
-              throughout the development process. This can include user testing
-              and prototyping.
+              Secondly we should incorporate user-centered design. Our design
+              process should be focused on the user and we should incorporate
+              their feedback throughout our process.
             </p>
 
             <p>
-              3.We should optimize usability: We should aim to create a product
-              that is easy to use and navigate, with clear instructions and
-              feedback.{" "}
+              Thirdly we should optimise usability of the product. We should
+              create a product which is easy to use and navigate having clear
+              instructions and feedback.
             </p>
             <p>
-              4.We should consider comfort: Our product should be designed to be
-              comfortable and ergonomic. This can involve designing a product
-              that fit a range of body types and sizes and minimizing strain on
-              the user's body.
+              Finally we should account for diversity. We should consider the
+              needs of diverse users. Some users of our product might have
+              disabilities , different cultural backgrounds and different level
+              of technical expertise.
             </p>
 
-            <p>
-              5.We should account for diversity: We have to consider the needs
-              of diverse users, including those with disabilities, different
-              cultural backgrounds, and different levels of technical expertise.
-            </p>
+            <p></p>
 
             <h2>Conclusion</h2>
             <p>
-              By integrating these principles we can create a product that is
+              By integrating these steps we can create a product that is
               user-friendly, safe, and comfortable for a diverse range of users.
             </p>
 
             <h2>Research sources</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Wikipedia (n.d.). Human factors and ergonomics, from
+              https://en.wikipedia.org/wiki/Human_factors_and_ergonomics
             </p>
 
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Norman, D. A. (2013). The design of everyday things: Revised and
+              expanded edition, from
+              https://ia902800.us.archive.org/3/items/thedesignofeverydaythingsbydonnorman/The
+              Design of Everyday Things by Don Norman.pdf
             </p>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-
-            <h2>Next steps</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              Shneiderman, B., & Plaisant, C. (2010). Designing the user
+              interface: Strategies for effective human-computer
+              interaction,from
+              http://seu1.org/files/level5/IT201/Book%20-%20Ben%20Shneiderman-Designing%20the%20User%20Interface-4th%20Edition.pdf
             </p>
           </div>
         </div>
@@ -240,12 +268,7 @@ const EmpathisePage = () => {
             </p>
 
             <h2>Question</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+            <p>What insights are valuable to teachers?</p>
 
             <div className="method-date-keywords-wrapper">
               <div>
@@ -253,6 +276,25 @@ const EmpathisePage = () => {
                 <img src={documentAnalysisImage} alt="#" />
               </div>
             </div>
+
+            <h2>Why</h2>
+
+            <p>
+              The purpose of this document analysis was to examine the four
+              documents provided by our stakeholder Dennis Kirsch containing the
+              results of focus group discussions. The focus groups were
+              conducted with the aim of gathering valuable insights and opinions
+              from participants on the subject of the experiences and
+              perceptions of physical education teachers regarding noise
+              exposure and hearing protection in gymnasiums. Through this
+              document analysis, I aimed to identify the central themes and
+              significant findings from the focus group discussions in order to
+              answer one of our research questions.
+            </p>
+
+            <h2>How</h2>
+
+            <p>ashdjahkdjhk</p>
 
             <h2>Results</h2>
             <p>
@@ -283,60 +325,43 @@ const EmpathisePage = () => {
 
             <h2>Conclusion</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              In conclusion, based on the insights extracted from the documents
+              I concluded that most teachers are not aware of the negative
+              effects high sound levels can have on their overall health
+              therefore our digital solution should aim to provide awareness to
+              PE teachers about those negative effects and help them monitor and
+              manage high sound levels during classes by taking necessary
+              preventative actions.
             </p>
 
             <h2>Research sources</h2>
 
             <div className="docs-wrapper">
-              <div className="doc">
+              <div className="doc" onClick={openFirstDoc}>
                 <div className="text">Document 1</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
-              <div className="doc">
+              <div className="doc" onClick={openSecondDoc}>
                 <div className="text">Document 2</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
-              <div className="doc">
+              <div className="doc" onClick={openThirdDoc}>
                 <div className="text">Document 3</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
-              <div className="doc">
+              <div className="doc" onClick={openFourthDoc}>
                 <div className="text">Document 4</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
             </div>
-
-            <h2>Next steps</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
           </div>
         </div>
       </div>
@@ -516,11 +541,11 @@ const EmpathisePage = () => {
               Lorem Ipsum.
             </p>
 
-            <h2>Survey link</h2>
+            <h2>Research Sources</h2>
 
             <div className="docs-wrapper">
               <div className="doc">
-                <div className="text">View survey</div>
+                <div className="text">Competitor analysis</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
@@ -528,45 +553,6 @@ const EmpathisePage = () => {
             </div>
 
             <h2>Next steps</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="emphatise-page-conclusion">
-        <h1>Empathise phase conclusion</h1>
-        <div className="wrapper">
-          <div className="container-image">
-            <img
-              src={phaseConclusionImage}
-              alt="#"
-              className="design-thinking-img"
-            />
-          </div>
-          <div className="container-text">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

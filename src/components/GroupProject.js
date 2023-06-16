@@ -334,7 +334,21 @@ const GroupProject = () => {
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
-              Competitor Analysis
+              Competitive Analysis
+            </p>
+
+            <p>
+              <span>
+                <AiOutlineCheck size={20} color="#eb6f5c" />
+              </span>
+              Smart watch design guidelines research
+            </p>
+
+            <p>
+              <span>
+                <AiOutlineCheck size={20} color="#eb6f5c" />
+              </span>
+              Mid-Term presentation
             </p>
 
             <p>
