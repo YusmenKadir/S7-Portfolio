@@ -5,7 +5,7 @@ import { useLocation } from "react-router";
 import moscowImg from "../assets/MosCow.png";
 import myMoodboardImg from "../assets/MyMoodboard.png";
 import sketchesImg from "../assets/UI Sketches.png";
-import userFlowImg from "../assets/User Flow Diagram.png";
+
 import PrevNext from "./PrevNext";
 const IdeatePage = () => {
   const location = useLocation();
@@ -49,6 +49,17 @@ const IdeatePage = () => {
 
   const openSketching = () => {
     window.open("https://cmdmethods.nl/cards/workshop/sketching", "_blank");
+  };
+
+  const openNavigationMap = () => {
+    window.open(
+      "https://toolkits.dss.cloud/design/method-card/navigation-map-2/",
+      "_blank"
+    );
+  };
+
+  const openIdeation = () => {
+    window.open("https://cmdmethods.nl/cards/workshop/ideation", "_blank");
   };
 
   return (
@@ -140,7 +151,10 @@ const IdeatePage = () => {
 
         <div className="wrapper">
           <div className="container-image">
-            <img src={userFlowImg} alt="#" />
+            <iframe
+              title="flows"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FBcHIyUqT51xofDgEmcBHuQ%2FUser-Flow-Diagram%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3DWLJrqEq7ZfigAtTJ-1"
+            ></iframe>
           </div>
           <div className="container-text">
             <h2> Introduction</h2>
@@ -154,7 +168,9 @@ const IdeatePage = () => {
               How can valuable gained insights be presented to the end users?
             </p>
             <h2>Method</h2>
-            <p className="method">User Flow Diagram</p>
+            <p className="method" onClick={openNavigationMap}>
+              Navigation Map
+            </p>
             <h2>Why</h2>
 
             <p>
@@ -167,12 +183,33 @@ const IdeatePage = () => {
 
             <h2>How</h2>
 
-            <p>We worked as a team </p>
+            <p>
+              This was a group activity and everyone contributed by sharing
+              ideas. We did it in couple of iterations. Based on the competitor
+              analysis I did previously I knew that most apps had the real -
+              time noise measuring meter on the home / dashboard screen. Based
+              on that I proposed my colleagues to incorporate that as a starting
+              point for our flow. Then from the MosCow analysis we also knew
+              that there would be a screen showing directions for space safes as
+              well as a screen for showing the daily dosage of sound levels.
+              Based on the research from the competitive analysis we came up
+              with a dosimeter screen. This decision was influenced by DecibelX
+              & db Meter apps which had a dosimeter showing percentage values of
+              sound dose levels. Finally in our 3rd iteration the Dosimeter
+              screen was renamed into Daily dose and the screen called Live
+              Dosimeter Metrics was renamed to Exposure limit and was placed as
+              screen next to Daily dose instead of being nested in order to
+              avoid user confusion.
+            </p>
             <h2>Results</h2>
-            <p></p>
+            <p>The end result with all iterations can be seen on the side.</p>
 
             <h2>Conclusion</h2>
-            <p></p>
+            <p>
+              After the user flow diagram was finalised we had a clear picture
+              of how users will interact with our app. With this marked as done
+              we were ready to proceed into the next activity in our process.
+            </p>
           </div>
         </div>
       </div>
@@ -260,13 +297,10 @@ const IdeatePage = () => {
           <div className="container-text">
             <h2> Introduction</h2>
             <p>
-              After we finalized our concept the next important step was to use
-              the MosCow method to streamline and pinpoint the essential
-              features of our app. This helped us to to identify the must-have,
-              should-have, could-have, and won't-have features of our
-              application. I played a crucial role here as it can be seen in the
-              embedded FigJam file because the inputs I provided in the fields
-              ultimately influenced features of our app.
+              After gathering some inspirations from the UI moodboards it was
+              time to showcase our creativity by sketching. This was a fun and
+              exciting process which resulted in having a nice low-level picture
+              of our future designs.
             </p>
             <h2>Question</h2>
             <p>
@@ -275,45 +309,51 @@ const IdeatePage = () => {
             </p>
             <h2>Method</h2>
             <p onClick={openSketching} className="method">
-              Sketching
+              Primary method: Sketching
+            </p>
+            <p className="method" onClick={openIdeation}>
+              Secondary method: Ideation
             </p>
             <h2>Why</h2>
 
             <p>
-              The MoSCoW method helped us prioritize the features and
-              requirements based on their importance. By using this method we
-              identified the must-have features that are most important for
-              providing insights into high sound levels, such as real-time
-              alerts and safe space suggestions. It allowed us to focus on
-              delivering the most important functionalities first by ensuring
-              that we will effectively address the primary needs of our target
-              users.
+              We used this method to ideate and communicate our design ideas
+              effectively. Sketching allowed us to explore our ideas, gather
+              feedback and make informed decisions before we advance to the next
+              phase.
             </p>
 
             <h2>How</h2>
 
             <p>
-              This was a group activity and each team member contributed with
-              this own ideas by placing sticky notes in the categorized columns.
-              I added my ideas to the MosCow table. After that we discussed our
-              ideas and we collectively created our final MosCow prioritization.
+              We did this altogether in FigJam by sketching our ideas. I
+              sketched my ideas on how certain screens might look like being
+              also influenced from the moodboard I created above. We validated
+              our drawn sketches by having discussions. At the end we placed our
+              sketches next to the screens from our user flow diagram in order
+              to have them categorised and sorted.
             </p>
             <h2>Results</h2>
             <p>
-              The results from the MosCow prioritization showcased that our app
-              will prioritize on having simple and easy to read interface,
-              real-time decibel measurement feature, customisable threshold
-              feature. Additional features like safe space suggestions and peak
-              noise alerts. Showcasing complex visuals and detailed graphs of
-              data won’t be a priority.
+              My creative mind allowed me to produce sketches depicting how
+              certain screens within Settings and Dosage Timeline might look
+              like. The 8 sketches shown on the top are my individual
+              contribution. My colleagues Majid and Oliver later on used my
+              ideas to produce high - fidelity versions on the Dosage Timeline
+              screen where they showed the dosage metrics with bar charts. I
+              used the rest of the sketches which I created as a foundation for
+              the low and high-fidelity versions of the screens I created within
+              Settings during the prototyping phase.
             </p>
 
             <h2>Conclusion</h2>
             <p>
-              The results we gained via the MosCow method provided us with
-              valuable clarity on the required screens for our app and enabled
-              us to refine the user flows and subsequently create a cohesive and
-              intuitive user experience.
+              To conclude we had an enjoyable sketching session which was also a
+              crucial step in our journey. My creative mind allowed me to
+              generate some sketches which depicted the envisioned screens
+              within the Settings and Dosage Timeline sections. These sketches
+              served as a foundation for the future high-fidelity versions of
+              those screens.
             </p>
           </div>
         </div>
