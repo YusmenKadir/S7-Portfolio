@@ -3,7 +3,7 @@ import "../App.scss";
 // import PrevNext from "./PrevNext";
 import PageIntroduction from "./PageIntroduction";
 import testingImg from "../assets/testingImg.png";
-import pdf from "../documents/portfolio-usability-test.pdf";
+import pdf from "../documents/individualprojectusabilitytest.pdf";
 
 const PortfolioTestPage = () => {
   const navigateToCmd = () => {

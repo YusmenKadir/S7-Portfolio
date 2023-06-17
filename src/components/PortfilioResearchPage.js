@@ -24,7 +24,7 @@ const PortfilioResearchPage = () => {
       <PageIntroduction
         pageName="portfolioresearch"
         pageIntroText=" Welcome to the research page of my individual project. In this page you will find 
-        the answers of the research questions which I formulated in the project plan in order to form conclusions thus I can justify my design choices. 
+        the answers of the research questions which I formulated in the project plan. 
         The products showcased justify learning outcomes 1 & 5. Keep scrolling down and
         enjoy reading!"
         learningOutcome="Learning outcome 1: User interaction (analysis & advice)"
@@ -120,7 +120,7 @@ const PortfilioResearchPage = () => {
               user-friendly website?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method">Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -135,7 +135,7 @@ const PortfilioResearchPage = () => {
               incorporate web design principles for portfolio website
             </span>
             <h2>Search engine</h2>
-            <p className="search-engine">Google</p>
+            <p className="search-engine" onClick={openGoogle}>Google</p>
             <h2>Results</h2>
             <p>
               9 principles of good web design & Z-Shaped Pattern For Reading Web
@@ -144,8 +144,8 @@ const PortfilioResearchPage = () => {
             </p>
             <h2>Conclusion</h2>
             <p>
-              From the results I concluded that I will to aim to utilise all
-              suggestions in my portfolio website. I learnt about the Z-shaped
+              From the results I concluded that I will to aim to utilise most
+              suggestions in my portfolio website. I learnt about the Zig-Zag
               pattern and I should use it in my portfolio website as well.
             </p>
             <h2>Research sources</h2>
@@ -166,7 +166,7 @@ const PortfilioResearchPage = () => {
               portfolio website and what are their benefits?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method">Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -185,7 +185,7 @@ const PortfilioResearchPage = () => {
               libraries & frameworks for making animations in javascript
             </span>
             <h2>Search engine</h2>
-            <p className="search-engine">Google</p>
+            <p className="search-engine" onClick={openGoogle}>Google</p>
             <h2>Results</h2>
             <p>
               React is a popular front-end JavaScript library for building user
@@ -225,7 +225,7 @@ const PortfilioResearchPage = () => {
               website to create a visually appealing and cohesive design?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method">Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -240,7 +240,7 @@ const PortfilioResearchPage = () => {
             </span>
             <span className="chip">colour theory in web design</span>
             <h2>Search engine</h2>
-            <p className="search-engine">Google</p>
+            <p className="search-engine" onClick={openGoogle}>Google</p>
             <h2>Results</h2>
             <p>
               The best place to start when creating a colour palette is with the
@@ -278,7 +278,7 @@ const PortfilioResearchPage = () => {
               effective for my website?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method">Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -292,7 +292,7 @@ const PortfilioResearchPage = () => {
               how to pick the right typography in web design?
             </span>
             <h2>Search engine</h2>
-            <p className="search-engine">Google</p>
+            <p className="search-engine" onClick={openGoogle}>Google</p>
             <h2>Results</h2>
             <p>
               Typography plays a critical role on any website by ensuring we can
@@ -328,7 +328,7 @@ const PortfilioResearchPage = () => {
               enhance the user experience?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method">Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -340,7 +340,7 @@ const PortfilioResearchPage = () => {
             <span className="chip">how to improve performance of website?</span>
             <span className="chip">website optimization techniques</span>
             <h2>Search engine</h2>
-            <p className="search-engine">Google</p>
+            <p className="search-engine" onClick={openGoogle}>Google</p>
             <h2>Results</h2>
             <p>
               Once you have tested the speed of your website, you can start
@@ -374,7 +374,7 @@ const PortfilioResearchPage = () => {
               What tools should I use to collect data from the usability test?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method">Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -386,7 +386,7 @@ const PortfilioResearchPage = () => {
             <span className="chip">free tools for usability testing</span>
             <span className="chip">best tools for usability testing</span>
             <h2>Search engine</h2>
-            <p className="search-engine">Google</p>
+            <p className="search-engine" onClick={openGoogle}>Google</p>
             <h2>Results</h2>
             <p>
               Useberry is a usability testing tool that focuses on multi-method

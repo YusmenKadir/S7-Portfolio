@@ -923,6 +923,15 @@ header .nav-btn {
       justify-content: center;
       flex-direction: column;
       text-align: left;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        width: 100%;
+        justify-content: center;
+        // color: #eb6f5c;
+        color: #031927;
+      }
       p {
         width: 90%;
         font-size: 18px;
@@ -990,6 +999,15 @@ header .nav-btn {
       justify-content: center;
       flex-direction: column;
       text-align: left;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        width: 100%;
+        justify-content: center;
+        // color: #eb6f5c;
+        color: #031927;
+      }
       p {
         width: 90%;
         font-size: 18px;
@@ -1058,6 +1076,15 @@ header .nav-btn {
       justify-content: center;
       flex-direction: column;
       text-align: left;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        width: 100%;
+        justify-content: center;
+        // color: #eb6f5c;
+        color: #031927;
+      }
       p {
         width: 90%;
         font-size: 18px;
@@ -1126,6 +1153,15 @@ header .nav-btn {
       justify-content: center;
       flex-direction: column;
       text-align: left;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        width: 100%;
+        justify-content: center;
+        // color: #eb6f5c;
+        color: #031927;
+      }
       p {
         width: 90%;
         font-size: 18px;
@@ -1761,7 +1797,7 @@ header .nav-btn {
           text-decoration: underline;
           cursor: pointer;
           color: #eb6f5c;
-          margin: 0 5px ;
+          margin: 0 5px;
         }
       }
     }
@@ -2692,6 +2728,7 @@ header .nav-btn {
     flex-direction: column;
     justify-content: center;
     margin: 200px 0;
+
     .wrapper {
       display: flex;
       // width: 100%;
@@ -2705,6 +2742,7 @@ header .nav-btn {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
         img {
           // width: 90%;
           width: 400px;
@@ -2715,6 +2753,20 @@ header .nav-btn {
         display: flex;
         align-items: center;
         flex-direction: column;
+
+        button {
+          border: none;
+          border-radius: 4px;
+          padding: 8px 16px;
+          background-color: #eb6f5c;
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 19px;
+          transition: background-color 0.3s ease;
+          margin: 50px 0;
+          width: 100%;
+          padding: 20px;
+        }
       }
       .container-text {
         flex: 1;
@@ -2741,7 +2793,7 @@ header .nav-btn {
           color: #eb6f5c;
         }
         p {
-          width: 90%;
+          // width: 90%;
           font-size: 18px;
           margin: 10px 0;
           display: flex;
@@ -4298,6 +4350,7 @@ header .nav-btn {
         .research-method {
           text-decoration: underline;
           color: #eb6f5c;
+          cursor: pointer;
         }
         .search-engine {
           text-decoration: underline;

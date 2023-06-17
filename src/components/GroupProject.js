@@ -6,7 +6,6 @@ import prototypingImage from "../assets/watchImage.png";
 import appreciationImg from "../assets/appreciationImg.png";
 import peerReviewImg from "../assets/PeerReviewImg.png";
 import designThinkingImage from "../assets/designthinking.png";
-// import watchImage from "../assets/Watches.png";
 import designerImage from "../assets/designer.png";
 import timemanagementImage from "../assets/timemanagement.png";
 import groupImage from "../assets/team.png";
@@ -17,7 +16,6 @@ import ideateImg from "../assets/ideateImage.png";
 import timelineImg from "../assets/processImg.png";
 import testImg from "../assets/test.png";
 import softwareImg from "../assets/sofwareImg.png";
-import recommendationsImg from "../assets/recommendationsImg.png";
 import { AiOutlineCheck } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
@@ -302,39 +300,32 @@ const GroupProject = () => {
               including:
             </p>
 
-            {/* <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Problem analysis
-            </p> */}
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Persona
-            </p>
+            <Link to="/group-project/define#persona">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Persona
+              </p>
+            </Link>
 
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Competitive Analysis
-            </p>
+            <Link to="/group-project/define#competivie-analysis">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Competitive Analysis
+              </p>
+            </Link>
 
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Smart watch design guidelines research
-            </p>
-
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Mid-Term presentation
-            </p>
+            <Link to="/group-project/define#mid-term-presentation">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Mid-Term presentation
+              </p>
+            </Link>
 
             <button onClick={navigateToDefinePage}>Read more</button>
           </div>
@@ -357,30 +348,41 @@ const GroupProject = () => {
               including:
             </p>
 
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Initial Sketches
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Moscow analysis
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              User flows
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              UI Moodboard
-            </p>
+            <Link to="/group-project/ideate#sketches">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Initial Sketches
+              </p>
+            </Link>
+
+            <Link to="/group-project/ideate#moscow">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Moscow analysis
+              </p>
+            </Link>
+
+            <Link to="/group-project/ideate#user-flows">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                User flows
+              </p>
+            </Link>
+
+            <Link to="/group-project/ideate#moodboard">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                UI Moodboard
+              </p>
+            </Link>
 
             <button onClick={navigateToIdeatePage}>Read more</button>
           </div>
@@ -410,9 +412,11 @@ const GroupProject = () => {
             <p>
               During the Prototype phase, I played an active role in creating
               prototypes for our smartwatch app. My contributions included:
+              creating low-fidelity and high fidelity prototypes of the end
+              product.
             </p>
 
-            <p>
+            {/* <p>
               <span>
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
@@ -423,7 +427,7 @@ const GroupProject = () => {
                 <AiOutlineCheck size={20} color="#eb6f5c" />
               </span>
               High-fidelity prototypes
-            </p>
+            </p> */}
 
             <button onClick={navigateToPrototypePage}>Read more</button>
           </div>
@@ -445,18 +449,23 @@ const GroupProject = () => {
 
             <p>During the Test phase, my main contribution included:</p>
 
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Usability testing
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Usability testing analysis
-            </p>
+            <Link to="/group-project/test#usability-testing">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Usability testing
+              </p>
+            </Link>
+
+            <Link to="/group-project/test#testing-analysis">
+              <p>
+                <span>
+                  <AiOutlineCheck size={20} color="#eb6f5c" />
+                </span>
+                Usability testing analysis
+              </p>
+            </Link>
 
             <button onClick={navigateToTestPage}>Read more</button>
           </div>

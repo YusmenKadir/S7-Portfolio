@@ -3,14 +3,7 @@ import PageIntroduction from "./PageIntroduction";
 import PrevNext from "./PrevNext";
 import "../App.scss";
 import peerReviewImg from "../assets/PeerReviewImg.png";
-import firstQuestion from "../assets/firstquestion.png";
-import secondQuestion from "../assets/secondquestion.png";
-import thirdQuestion from "../assets/thirdquestion.png";
-import fourthQuestion from "../assets/fourthquestion.png";
-import fifthQuestion from "../assets/fifthquestion.png";
-import sixthQuestion from "../assets/sixthquestion.png";
-import seventhQuestion from "../assets/seventhquestion.png";
-import eightQuestion from "../assets/eightquestion.png";
+import peerReviewDoc from "../documents/Peer_review.pdf";
 
 const PeerReviewPage = () => {
   const navigateToSurveyCmd = () => {
@@ -19,6 +12,10 @@ const PeerReviewPage = () => {
 
   const openGoogleForms = () => {
     window.open("https://forms.gle/iyaZy3T26W5sffwz6", "_blank");
+  };
+
+  const openPeerReviewDoc = () => {
+    window.open(peerReviewDoc, "_blank");
   };
   return (
     <div className="peerreview-page">
@@ -70,14 +67,7 @@ const PeerReviewPage = () => {
             <p className="heading">Results</p>
 
             <div className="images">
-              <img src={firstQuestion} alt="#" />
-              <img src={secondQuestion} alt="#" />
-              <img src={thirdQuestion} alt="#" />
-              <img src={fourthQuestion} alt="#" />
-              <img src={fifthQuestion} alt="#" />
-              <img src={sixthQuestion} alt="#" />
-              <img src={seventhQuestion} alt="#" />
-              <img src={eightQuestion} alt="#" />
+              <button onClick={openPeerReviewDoc}>View Results</button>
             </div>
 
             <p className="heading">My takeaways</p>
@@ -97,10 +87,10 @@ const PeerReviewPage = () => {
       </div>
 
       <PrevNext
-        nextLink="/group-project/recommendations"
-        previousLink="/group-project/test"
-        previousText="Test phase"
-        nextText="Project Recommendations"
+        nextLink="/group-project/reflection"
+        previousLink="/group-project/stakeholder-appreciation"
+        previousText="Stakeholder Appreciation"
+        nextText="Reflection"
       />
     </div>
   );

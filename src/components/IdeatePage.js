@@ -19,7 +19,7 @@ const IdeatePage = () => {
       moscowRef.current.scrollIntoView({ behavior: "smooth" });
     }
 
-    if (location.hash === "#uimoodboard" && moodboardRef.current) {
+    if (location.hash === "#moodboard" && moodboardRef.current) {
       moodboardRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (location.hash === "#user-flows" && flowsRef.current) {

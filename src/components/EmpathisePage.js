@@ -19,7 +19,6 @@ import userInterviewGuide from "../documents/User_Interview_Guide.pdf";
 import userInterviewQuestions from "../documents/User_Interview_Questions.pdf";
 import { useLocation, useNavigate } from "react-router";
 
-
 const EmpathisePage = () => {
   // const [isSticky] = useState(true);
   const navigate = useNavigate();
@@ -188,9 +187,7 @@ const EmpathisePage = () => {
               <div>
                 <h2>Search keywords</h2>
                 <BsKeyboard size={50} />
-                <span className="chip">
-                  human factors and ergonomics in digital product design
-                </span>
+                <span className="chip">human factors in ux design</span>
                 <span className="chip">
                   What are human factors and ergonomics
                 </span>
@@ -262,16 +259,21 @@ const EmpathisePage = () => {
             </p>
 
             <p>
-              Norman, D. A. (2013). The design of everyday things: Revised and
-              expanded edition, from
-              https://ia902800.us.archive.org/3/items/thedesignofeverydaythingsbydonnorman/The
-              Design of Everyday Things by Don Norman.pdf
+              Mandy Cornwell (2022, 12 Feb).Inclusion first: How to make your
+              product accessible and inclusive, from
+              https://uxdesign.cc/inclusion-first-how-to-make-your-product-accessible-and-inclusive-b8ccbeb24b22
             </p>
             <p>
-              Shneiderman, B., & Plaisant, C. (2010). Designing the user
-              interface: Strategies for effective human-computer
-              interaction,from
-              http://seu1.org/files/level5/IT201/Book%20-%20Ben%20Shneiderman-Designing%20the%20User%20Interface-4th%20Edition.pdf
+              UX spot.io (n.d.).Understand human factors, from
+              https://uxspot.io/understand-human-factors.html
+            </p>
+            <p>
+              Cint (2022, 6 Feb).Why market research is important, from
+              https://www.cint.com/blog/why-market-research-is-important
+            </p>
+            <p>
+              Bjorn Rohles (2022, 20 Dec).More diversity for better experiences,
+              from https://rohles.net/en/articles/diversity-user-experience
             </p>
           </div>
         </div>
@@ -467,7 +469,9 @@ const EmpathisePage = () => {
               specific information about her background, experience and
               challenges and that served as a foundation for me to develop a
               more accurate and relatable{" "}
-              <span onClick={openPersonaPage}>User persona in the define phase.</span>
+              <span onClick={openPersonaPage}>
+                User persona in the define phase.
+              </span>
             </p>
 
             <h2>How</h2>

@@ -6,7 +6,7 @@ import amandaPersonasImg from "../assets/Amanda-Persona.png";
 import midTermPresi from "../documents/Noise Control Mid-Term Review.pdf";
 import { IoMdOpen } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router";
-import competirorAnalysisDoc from "../documents/Competitive-analysis.pdf";
+import competirorAnalysisDoc from "../documents/Competitiveanalysis.pdf";
 
 const DefinePage = () => {
   const [isSticky] = useState(true);
@@ -15,7 +15,6 @@ const DefinePage = () => {
 
   const personaRef = useRef(null);
   const presiRef = useRef(null);
-  const uiResearchRef = useRef(null);
   const competitorRef = useRef(null);
 
   // useEffect(() => {
@@ -47,9 +46,6 @@ const DefinePage = () => {
 
     if (location.hash === "#competivie-analysis" && competitorRef.current) {
       competitorRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (location.hash === "#uiuxresearch" && uiResearchRef.current) {
-      uiResearchRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (location.hash === "#mid-term-presentation" && presiRef.current) {
       presiRef.current.scrollIntoView({ behavior: "smooth" });
@@ -164,22 +160,6 @@ const DefinePage = () => {
             </p>
 
             <h2>How</h2>
-            {/* <p>
-              To create the persona, I gathered and analyzed data from the
-              <span onClick={openEmpathisePage}>
-                document analysis and conducted a user interview{" "}
-              </span>{" "}
-              with a primary school teacher. The document analysis provided
-              valuable insights into the experiences and perceptions of teachers
-              regarding noise exposure in gymnasiums, while the user interview
-              added a real-life perspective and additional insights. Based on
-              this information, I identified common patterns, characteristics,
-              and challenges among the teachers, which formed the basis for
-              developing the persona. The persona represents a fictional
-              character that embodies the key traits and needs of the target
-              user group, allowing us to empathize and design solutions that
-              address their specific requirements and concerns.
-            </p> */}
 
             <p>
               To create the persona, I analyzed{" "}
@@ -208,8 +188,9 @@ const DefinePage = () => {
           </div>
         </div>
       </div>
+
       <div className="define-page-competitor" ref={competitorRef}>
-        <h1>Competitive analysis</h1>
+        <h1>Competitive Analysis</h1>
         <div className="wrapper">
           <div className="container-text">
             <h2> Introduction</h2>
@@ -233,102 +214,6 @@ const DefinePage = () => {
             <h2>How</h2>
 
             <h2>Results</h2>
-
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-
-            <h2>Conclusion</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-
-            <h2>Research sources</h2>
-
-            <div className="docs-wrapper">
-              <div className="doc">
-                <div className="text">Competitive analysis</div>
-                <div className="icon">
-                  <IoMdOpen size={25} />{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="define-page-research" ref={uiResearchRef}>
-        <h1>Smart watch design guidelines research</h1>
-        <div className="wrapper">
-          <div className="container-text">
-            <h2> Introduction</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-
-            <h2>Question</h2>
-            <p>How can valuable insights be presented to the end users?</p>
-
-            <h2>Method</h2>
-            <p className="method" onClick={openCompetitor}>
-              Competitive analysis
-            </p>
-
-            <h2>Why</h2>
-
-            <h2>How</h2>
-
-            <h2>Results</h2>
-
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-
-            <h2>Conclusion</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-
-            <h2>Research sources</h2>
 
             <div className="docs-wrapper" onClick={openCompetitorDoc}>
               <div className="doc">
@@ -338,6 +223,24 @@ const DefinePage = () => {
                 </div>
               </div>
             </div>
+
+            <h2>Conclusion</h2>
+            <p>
+              From the analysis I conducted, I concluded that all the apps I
+              found displayed the data to the user using the same principle.
+              They all had a progress indicator showcasing the db levels and a
+              chart below it. All apps also displayed the min , max and average
+              db levels captured.
+            </p>
+
+            <h2>Recommendation</h2>
+            <p>
+              The Sound Meter app from the Huawei store was definitely an
+              inspiration mainly because of the nice colour schemes provided
+              from the app. That could be taken into account when designing our
+              app. The Clear Wave app also may be an inspiration because of nice
+              combination of blue & white colours.
+            </p>
           </div>
         </div>
       </div>

@@ -8,9 +8,8 @@ import codingImage from "../assets/coding.png";
 import researchImage from "../assets/research.png";
 import { useNavigate } from "react-router";
 import websiteSolutionImage from "../assets/website-solution.png";
-import designThinkingImage2 from "../assets/designThinkingImage2.png";
+import projectPlan from "../documents/Project Plan Revised Portfolio Yusmen Kadir.pdf";
 import processPortfolioImage from "../assets/processPortfolio.png";
-import cmdMethodsPackImage from "../assets/cmdMethodsPack.png";
 
 const IndividualProject = () => {
   const navigate = useNavigate();
@@ -34,6 +33,10 @@ const IndividualProject = () => {
 
   const openIct = () => {
     window.open("https://ictresearchmethods.nl/Methods", "_blank");
+  };
+
+  const openProjectPlan = () => {
+    window.open(projectPlan, "_blank");
   };
 
   return (
@@ -111,7 +114,7 @@ const IndividualProject = () => {
               objectives and showcases my products effectively.
             </p>
 
-            <button>Open Project Plan</button>
+            <button onClick={openProjectPlan}>Open Project Plan</button>
           </div>
           <div className="container-image">
             <img
