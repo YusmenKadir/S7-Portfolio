@@ -1,25 +1,28 @@
 import React, { useState, useRef, useEffect } from "react";
 import literatureStudyImg from "../assets/literatureStudyImg.png";
 import literaturecmdImg from "../assets/cmdliterature.png";
-import { BsCalendar3, BsSearch, BsKeyboard } from "react-icons/bs";
+import { BsSearch, BsKeyboard } from "react-icons/bs";
 import { IoMdOpen } from "react-icons/io";
 import PrevNext from "./PrevNext";
 import PageIntroduction from "./PageIntroduction";
-import phaseConclusionImage from "../assets/phaseConclusion.png";
 import documentAnalysisImage from "../assets/docanalysisImg.png";
 import reviewedDocsImage from "../assets/reviewedDocsImg.png";
 import cdmInterviewImg from "../assets/cmdInterview.png";
-import cmdSurveyImg from "../assets/cmdSurveyImg.png";
-import customerSurveyImg from "../assets/customerSurveyImg.png";
 import documentOne from "../documents/Grip Samevatting Focusgroepen.pdf";
 import documentTwo from "../documents/Grip Student Ervaring Gehoorbescherming.pdf";
 import documentThree from "../documents/Grip Student Klachten.pdf";
 import documentFour from "../documents/Grip Student Overige Klachten.pdf";
-import { useLocation } from "react-router";
+import documentAnalysisDoc from "../documents/Document-analysis-group-project.pdf";
+import interviewAnalysisDoc from "../documents/User-Interview-Group-Project.pdf";
+import userInterviewTranscript from "../documents/USER_INTERVIEW_TRANSCRIPT.pdf";
+import userInterviewGuide from "../documents/User_Interview_Guide.pdf";
+import userInterviewQuestions from "../documents/User_Interview_Questions.pdf";
+import { useLocation, useNavigate } from "react-router";
+
 
 const EmpathisePage = () => {
-  const [isSticky] = useState(true);
-
+  // const [isSticky] = useState(true);
+  const navigate = useNavigate();
   const location = useLocation();
   const literatureStudyRef = useRef(null);
   const docAnalysisRef = useRef(null);
@@ -53,11 +56,35 @@ const EmpathisePage = () => {
   const openFourthDoc = () => {
     window.open(documentFour, "_blank");
   };
+
+  const openDocAnalysis = () => {
+    window.open(documentAnalysisDoc, "_blank");
+  };
+
+  const openUserInterview = () => {
+    window.open(interviewAnalysisDoc, "_blank");
+  };
+
+  const openInterviewScript = () => {
+    window.open(userInterviewTranscript, "_blank");
+  };
+
+  const openInterviewGuide = () => {
+    window.open(userInterviewGuide, "_blank");
+  };
+
+  const openInterviewQuestions = () => {
+    window.open(userInterviewQuestions, "_blank");
+  };
+
+  const openPersonaPage = () => {
+    navigate("/group-project/define#persona");
+  };
   return (
     <div className="emphatise-page">
       <PageIntroduction
         pageName="emphatise"
-        pageIntroText=" Welcome to the Empathise phase insights page. In this page you will
+        pageIntroText=" Welcome to the Empathise phase products page. In this page you will
         find a detailed image of the activities I conducted during the
         empathize phase and the key findings that influenced our project. The
         products showcased justify learning outcome 1. Keep scrolling down and
@@ -119,7 +146,7 @@ const EmpathisePage = () => {
             <h2> Introduction</h2>
             <p>
               I started this phase by conducting literature study in order to
-              answer this hard question. I was determined to provide the best
+              answer this tricky question. I was determined to provide the best
               answer possible despite the challenges I encountered in finding
               good research sources on this topic.
             </p>
@@ -136,8 +163,8 @@ const EmpathisePage = () => {
               The literature study I conducted was important because it taught
               me about the important steps we needed to take to create a good
               product at the end of our journey. Armed with this knowledge, I
-              tried to highlight the important points to my colleagues so that
-              we would be on the same page during our process.
+              highlighted the important points to my colleagues to ensure we
+              will incorporate the results from this research into our product.
             </p>
 
             <h2>How</h2>
@@ -223,8 +250,9 @@ const EmpathisePage = () => {
 
             <h2>Conclusion</h2>
             <p>
-              By integrating these steps we can create a product that is
-              user-friendly, safe, and comfortable for a diverse range of users.
+              To conclude the integration of the above mentioned steps into our
+              design process can ensure the product we are creating is
+              user-friendly, safe and comfortable for wide range of users.
             </p>
 
             <h2>Research sources</h2>
@@ -261,10 +289,10 @@ const EmpathisePage = () => {
           <div className="container-text">
             <h2> Introduction</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              After conducting literature study in the section above in order to
+              answer an important research question, the next task for me was to
+              conduct document analysis and dive into the documentation we
+              received from our stakeholder.
             </p>
 
             <h2>Question</h2>
@@ -294,33 +322,48 @@ const EmpathisePage = () => {
 
             <h2>How</h2>
 
-            <p>ashdjahkdjhk</p>
+            <p>
+              I reviewed in detail all the documents that were provided to us
+              and extracted all the important points to formulate the results
+              and the conclusion.
+            </p>
 
             <h2>Results</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              The analysis of the first document concluded that most
+              participants were not aware of the occupational health and safety
+              standards with regard to noise. All teachers experienced physical
+              and mental health issues, including headaches, fatigue, voice
+              complaints, irritability, decreased hearing, and tinnitus due to
+              noise pollution. The use of hearing protection equipment was found
+              to be effective, but it was found to have negative effects on
+              communication with students.
             </p>
 
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              The analysis of the second document revealed three themes:
+              importance, functionality, and communication. The results showed
+              that the use of hearing protection equipment was crucial for
+              physical education teachers to protect their hearing, and the
+              majority of participants used them regularly.
+            </p>
+
+            <p>
+              The analysis of the third document concluded that physical
+              education teachers suffer from various complaints, including
+              fatigue, headaches, dizziness, voice complaints, stimulus
+              sensitivity, and concentration, as a result of exposure to noise
+              in sports facilities.
+            </p>
+
+            <p>
+              According to the analysis of the last document, the main
+              complaints among physical education teachers in primary education
+              due to noise pollution are fatigue, headaches, irritability,
+              reduced focus, and voice problems. The study found that excessive
+              noise pollution leads to fatigue, headache, irritability, and
+              reduced focus among the teachers.{" "}
+              <span onClick={openDocAnalysis}>Read more</span>
             </p>
 
             <h2>Conclusion</h2>
@@ -338,25 +381,27 @@ const EmpathisePage = () => {
 
             <div className="docs-wrapper">
               <div className="doc" onClick={openFirstDoc}>
-                <div className="text">Document 1</div>
+                <div className="text">Grip Samevatting Focusgroepen</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
               <div className="doc" onClick={openSecondDoc}>
-                <div className="text">Document 2</div>
+                <div className="text">
+                  Grip Student Ervaring Gehoorbescherming
+                </div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
               <div className="doc" onClick={openThirdDoc}>
-                <div className="text">Document 3</div>
+                <div className="text">Grip Student Klachten</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
               <div className="doc" onClick={openFourthDoc}>
-                <div className="text">Document 4</div>
+                <div className="text">Grip Student Overige Klachten</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
@@ -382,18 +427,22 @@ const EmpathisePage = () => {
           <div className="container-text">
             <h2> Introduction</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              The conducted document analysis above provided us with valuable
+              information however that wasn’t sufficient to fully understand the
+              problems faced by PE teachers in managing sound levels during
+              classes. I knew we should conduct our own interviews therefore as
+              a point of contact person I managed to arrange that by contacting
+              the husband of the participant who was a friend of mine. That was
+              the only interview we managed to conduct because we faced
+              limitations in finding other teachers. Nevertheless the interview
+              proved to be highly beneficial to our research process.
             </p>
 
             <h2>Question</h2>
+            <p>What insights are valuable to teachers?</p>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Are there any existing measures for noise control in primary
+              schools?
             </p>
 
             <div className="method-date-keywords-wrapper">
@@ -403,168 +452,99 @@ const EmpathisePage = () => {
               </div>
             </div>
 
+            <h2>Why</h2>
+            <p>
+              The interview I conducted was an important component of our
+              research process due to several reasons. First it provided us with
+              an opportunity to gather insights and perspectives directly from
+              our target user group. Secondly it allowed us to compare and
+              contrast the information extracted from the document analysis with
+              the actual experiences of a teacher. Thirdly it enabled us to
+              engage in a conversation with the teacher and try to uncover new
+              perspectives which can enrich our understanding of the problem and
+              help us further with refining the features and design of our
+              digital solution. Lastly the interview helped me to gather
+              specific information about her background, experience and
+              challenges and that served as a foundation for me to develop a
+              more accurate and relatable{" "}
+              <span onClick={openPersonaPage}>User persona in the define phase.</span>
+            </p>
+
+            <h2>How</h2>
+            <p>
+              The interview was conducted via Microsoft Teams. I was the
+              interviewer and my colleagues Prakasa and Tanmay were observers. I
+              tried to follow our interview guidelines and ask the participant
+              specific questions that we formulated beforehand. At a certain
+              point the interview became an open discussion which was a good
+              indication that the participant was feeling comfortable and was
+              able to share more valuable insights despite having difficulties
+              in speaking English.
+            </p>
+
             <h2>Results</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              During the user interview with Alinde De Zwaan Ifionu, a primary
+              school teacher with 20 years of experience, valuable insights were
+              gathered regarding the impact of noise in the classroom. Although
+              not a PE teacher herself by diploma, she provided insights into
+              the noise levels experienced during PE classes and highlighted the
+              effectiveness of using paper traffic lights to improve
+              concentration in regular classes. The participant also expressed
+              interest in using a smartwatch to measure sound levels and
+              mentioned the difference in noise control between teaching younger
+              and older students.{" "}
+              <span onClick={openUserInterview}>Read more</span>
             </p>
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+            <p></p>
 
-            <h2>Key takeaways</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
             <h2>Conclusion</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              The interview with Alinde De Zwaan Ifionu, a primary school
+              teacher from the Netherlands, revealed that noise levels during PE
+              classes can be a challenge, particularly during football or group
+              games. However, the use of paper traffic lights has been effective
+              in improving student concentration in regular classes which
+              answered our question 'Are there any existing measures for noise
+              control in primary schools?'. The participant also suggested the
+              potential use of a smartwatch to measure sound levels in
+              classrooms.
+            </p>
+
+            <h2>Recommendation</h2>
+            <p>
+              In the future schools may implement a similar tool like the paper
+              traffic lights inside gyms to help PE teachers become more aware
+              of high sound levels during their classes.
             </p>
 
             <h2>Related documents</h2>
 
-            <div className="docs-wrapper">
+            <div className="docs-wrapper" onClick={openInterviewGuide}>
               <div className="doc">
-                <div className="text">User Interview</div>
+                <div className="text">User Interview Guide</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
             </div>
-
-            <h2>Next steps</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="emphatise-page-survey">
-        <h1>Survey</h1>
-        <div className="wrapper">
-          <div className="container-image">
-            <img
-              src={customerSurveyImg}
-              alt="#"
-              className="design-thinking-img"
-            />
-          </div>
-          <div className="container-text">
-            <h2> Introduction</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-
-            <h2>Question</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-
-            <div className="method-date-keywords-wrapper">
-              <div>
-                <h2>Method</h2>
-                <img src={cmdSurveyImg} alt="#" />
-              </div>
-            </div>
-
-            <h2>Results</h2>
-
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-
-            <h2>Conclusion</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-
-            <h2>Research Sources</h2>
-
-            <div className="docs-wrapper">
+            <div className="docs-wrapper" onClick={openInterviewScript}>
               <div className="doc">
-                <div className="text">Competitor analysis</div>
+                <div className="text">Interview Transcript</div>
                 <div className="icon">
                   <IoMdOpen size={25} />
                 </div>
               </div>
             </div>
-
-            <h2>Next steps</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+            <div className="docs-wrapper" onClick={openInterviewQuestions}>
+              <div className="doc">
+                <div className="text">Interview Questions</div>
+                <div className="icon">
+                  <IoMdOpen size={25} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

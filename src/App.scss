@@ -1178,6 +1178,7 @@ header .nav-btn {
       align-items: center;
       justify-content: space-evenly;
       flex-direction: row;
+      width: 100%;
     }
 
     .container-image {
@@ -1736,13 +1737,6 @@ header .nav-btn {
       // border: 1px solid red;
       width: 100%;
       margin: 30px 0;
-
-      iframe {
-        width: 70%;
-        height: 400px;
-        border: 3px solid #eb6f5c;
-        border-radius: 5px;
-      }
     }
     .container-text {
       flex: 1;
@@ -1760,8 +1754,15 @@ header .nav-btn {
         // width: 100%;
         font-size: 18px;
         margin: 10px 0;
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
+
+        span {
+          text-decoration: underline;
+          cursor: pointer;
+          color: #eb6f5c;
+          margin: 0 5px ;
+        }
       }
     }
 
@@ -1834,16 +1835,17 @@ header .nav-btn {
       // flex-direction: row;
 
       .doc {
-        width: 200px;
+        min-width: 40%;
         height: 50px;
         background-color: #eb6f5c;
         color: white;
         border-radius: 10x;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         margin: 10px 0;
         border-radius: 5px;
+        cursor: pointer;
 
         .text {
           // flex: 2;
@@ -1871,7 +1873,7 @@ header .nav-btn {
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      text-align: left;
+      // text-align: left;
 
       .method {
         text-decoration: underline;
@@ -1920,55 +1922,6 @@ header .nav-btn {
           object-fit: contain;
         }
       }
-    }
-  }
-
-  &-conclusion {
-    margin: 200px 0;
-    // min-height: 50vh;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-direction: column;
-
-    h1 {
-      font-size: 36px;
-    }
-
-    .wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-direction: column;
-      width: 60%;
-    }
-
-    .container-image {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .container-text {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: left;
-      p {
-        width: 90%;
-        font-size: 18px;
-        margin: 10px 0;
-        display: flex;
-        align-items: center;
-      }
-    }
-    .design-thinking-img {
-      width: 400px;
-      // height: 400px;
-      object-fit: contain;
-      transition: all 0.3s ease;
     }
   }
 }
@@ -3084,7 +3037,7 @@ header .nav-btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid red;
+        // border: 1px solid red;
       }
 
       p {
@@ -3165,19 +3118,22 @@ header .nav-btn {
       display: flex;
       align-items: center;
       width: 100%;
-      justify-content: space-evenly;
+      // justify-content: space-evenly;
       flex-wrap: wrap;
       // flex-direction: row;
+      flex-direction: column;
 
       .doc {
-        width: 200px;
+        min-width: 40%;
         height: 50px;
+        padding: 5px;
         background-color: #eb6f5c;
         color: white;
-        border-radius: 10x;
+        border-radius: 10px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
+        justify-content: center;
         margin: 10px 0;
         border-radius: 5px;
         cursor: pointer;
@@ -3213,8 +3169,13 @@ header .nav-btn {
         // width: 100%;
         font-size: 18px;
         margin: 10px 0;
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
+        span {
+          color: #eb6f5c;
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
 
@@ -3285,16 +3246,18 @@ header .nav-btn {
       // flex-direction: row;
 
       .doc {
-        width: 200px;
+        min-width: 40%;
         height: 50px;
         background-color: #eb6f5c;
         color: white;
         border-radius: 10x;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
+        justify-content: center;
         margin: 10px 0;
         border-radius: 5px;
+        cursor: pointer;
 
         .text {
           // flex: 2;
@@ -3334,11 +3297,16 @@ header .nav-btn {
       flex-direction: column;
       text-align: left;
       p {
-        width: 100%;
+        // width: 100%;
         font-size: 18px;
         margin: 10px 0;
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
+        span {
+          color: #eb6f5c;
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
 
@@ -3375,169 +3343,6 @@ header .nav-btn {
           object-fit: contain;
         }
       }
-    }
-  }
-
-  &-survey {
-    margin: 200px 0;
-    // min-height: 50vh;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-direction: column;
-
-    h1 {
-      font-size: 36px;
-    }
-
-    .wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-direction: row;
-      flex-direction: column;
-      width: 60%;
-      // border: 1px solid red;
-    }
-
-    .docs-wrapper {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      // flex-direction: row;
-
-      .doc {
-        width: 200px;
-        height: 50px;
-        background-color: #eb6f5c;
-        color: white;
-        border-radius: 10x;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        margin: 10px 0;
-        border-radius: 5px;
-
-        .text {
-          // flex: 2;
-          align-items: center;
-          display: flex;
-          justify-content: center;
-          font-size: 18px;
-        }
-
-        .icon {
-          // flex: 1;
-        }
-      }
-    }
-
-    .container-image {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .container-text {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: left;
-      p {
-        width: 100%;
-        font-size: 18px;
-        margin: 10px 0;
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    h2 {
-      margin: 20px 0;
-    }
-    .design-thinking-img {
-      width: 400px;
-      height: 400px;
-      object-fit: contain;
-      transition: all 0.3s ease;
-    }
-
-    .method-date-keywords-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        margin: 10px;
-        background-color: #fdfdfd;
-        border: 2px solid darken(#eb6f5c, 10%);
-        border-radius: 5px;
-        padding: 5px;
-        text-align: center;
-
-        img {
-          width: 250px;
-          height: 250px;
-          object-fit: contain;
-        }
-      }
-    }
-  }
-
-  &-conclusion {
-    margin: 200px 0;
-    // min-height: 50vh;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-direction: column;
-
-    h1 {
-      font-size: 36px;
-    }
-
-    .wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-direction: column;
-      width: 60%;
-    }
-
-    .container-image {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .container-text {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: left;
-      p {
-        width: 90%;
-        font-size: 18px;
-        margin: 10px 0;
-        display: flex;
-        align-items: center;
-      }
-    }
-    .design-thinking-img {
-      width: 400px;
-      // height: 400px;
-      object-fit: contain;
-      transition: all 0.3s ease;
     }
   }
 }

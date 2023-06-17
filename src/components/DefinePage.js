@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../App.scss";
 import PageIntroduction from "./PageIntroduction";
 import PrevNext from "./PrevNext";
 import amandaPersonasImg from "../assets/Amanda-Persona.png";
-import phaseConclusionImage from "../assets/phaseConclusion.png";
-import cmdPersonaImg from "../assets/cmdPersona.png";
+import midTermPresi from "../documents/Noise Control Mid-Term Review.pdf";
 import { IoMdOpen } from "react-icons/io";
+import { useLocation, useNavigate } from "react-router";
+import competirorAnalysisDoc from "../documents/Competitive-analysis.pdf";
 
 const DefinePage = () => {
   const [isSticky] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const personaRef = useRef(null);
+  const presiRef = useRef(null);
+  const uiResearchRef = useRef(null);
+  const competitorRef = useRef(null);
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -32,6 +40,21 @@ const DefinePage = () => {
   //   };
   // }, []);
 
+  useEffect(() => {
+    if (location.hash === "#persona" && personaRef.current) {
+      personaRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (location.hash === "#competivie-analysis" && competitorRef.current) {
+      competitorRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#uiuxresearch" && uiResearchRef.current) {
+      uiResearchRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#mid-term-presentation" && presiRef.current) {
+      presiRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   const openCompetitor = () => {
     window.open(
@@ -39,11 +62,30 @@ const DefinePage = () => {
       "_blank"
     );
   };
+
+  const openPresi = () => {
+    window.open(midTermPresi, "_blank");
+  };
+
+  const openPersona = () => {
+    window.open(
+      "https://cmdmethods.nl/cards/stepping-stones/persona",
+      "_blank"
+    );
+  };
+
+  const openCompetitorDoc = () => {
+    window.open(competirorAnalysisDoc, "_blank");
+  };
+
+  const openEmpathisePage = () => {
+    navigate("/group-project/empathise#literature-study");
+  };
   return (
     <div className="define-page">
       <PageIntroduction
         pageName="define"
-        pageIntroText=" Welcome to the Define phase insights page. In this page you will
+        pageIntroText=" Welcome to the Define phase products page. In this page you will
         find a detailed image of the activities I conducted during the
         define phase and the key findings that influenced our project. The
         products showcased justify learning outcome 1. Keep scrolling down and
@@ -89,136 +131,67 @@ const DefinePage = () => {
           <div className="phase-name">Reflection</div>
         </div>
       </div> */}
-      {/* <div className="define-page-problemanalysis">
-        <h1>Problem analysis</h1>
-        <div className="wrapper">
-          <div className="container-image">
-            <img
-              src={literatureStudyImg}
-              alt="#"
-              className="design-thinking-img"
-            />
-          </div>
-          <div className="container-text">
-            <h2> Introduction</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
 
-            <h2>Question</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-
-            <div className="method-date-keywords-wrapper">
-              <h2>Results</h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-
-              <h2>Conclusion</h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-
-              <h2>Research sources</h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-
-              <h2>Next steps</h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <div className="define-page-persona">
+      <div className="define-page-persona" ref={personaRef}>
         <h1>Persona</h1>
         <div className="wrapper">
-          <div className="container-image">
-            {/* <img
-              src={reviewedDocsImage}
-              alt="#"
-              className="design-thinking-img"
-            /> */}
-          </div>
+          <div className="container-image"></div>
           <div className="container-text">
             <h2> Introduction</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              During the define phase, I contributed to our process by creating
+              a persona that represents our target user group based on the
+              previous research I and my colleagues did during the empathise
+              phase.
             </p>
 
             <h2>Question</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              How can we visually represent our research findings and collected
+              insights in a meaningful and impactful way?
             </p>
 
             <h2>Method</h2>
-            <p className="method">Persona</p>
+            <p className="method" onClick={openPersona}>
+              Persona
+            </p>
+
+            <h2>Why</h2>
+
+            <p>
+              To represent the user in discussions about the design in an
+              elegant way.
+            </p>
+
+            <h2>How</h2>
+            {/* <p>
+              To create the persona, I gathered and analyzed data from the
+              <span onClick={openEmpathisePage}>
+                document analysis and conducted a user interview{" "}
+              </span>{" "}
+              with a primary school teacher. The document analysis provided
+              valuable insights into the experiences and perceptions of teachers
+              regarding noise exposure in gymnasiums, while the user interview
+              added a real-life perspective and additional insights. Based on
+              this information, I identified common patterns, characteristics,
+              and challenges among the teachers, which formed the basis for
+              developing the persona. The persona represents a fictional
+              character that embodies the key traits and needs of the target
+              user group, allowing us to empathize and design solutions that
+              address their specific requirements and concerns.
+            </p> */}
+
+            <p>
+              To create the persona, I analyzed{" "}
+              <span onClick={openEmpathisePage}>
+                documents and conducted a user interview with a primary school
+                teacher.
+              </span>
+              Combining insights from both sources, I identified patterns and
+              challenges among teachers. The persona represents the target user
+              group, guiding our design process to address their specific needs
+              and concerns.
+            </p>
 
             <h2>Results</h2>
 
@@ -228,22 +201,15 @@ const DefinePage = () => {
 
             <h2>Conclusion</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              In conclusion this persona helped us understand the frustrations,
+              goals and preferences of our target users which subsequently
+              resulted in the creation of a tailored digital solution.
             </p>
           </div>
         </div>
       </div>
-      <div className="define-page-competitor">
-        <h1>Competitor analysis</h1>
+      <div className="define-page-competitor" ref={competitorRef}>
+        <h1>Competitive analysis</h1>
         <div className="wrapper">
           <div className="container-text">
             <h2> Introduction</h2>
@@ -309,7 +275,7 @@ const DefinePage = () => {
         </div>
       </div>
 
-      <div className="define-page-research">
+      <div className="define-page-research" ref={uiResearchRef}>
         <h1>Smart watch design guidelines research</h1>
         <div className="wrapper">
           <div className="container-text">
@@ -364,7 +330,7 @@ const DefinePage = () => {
 
             <h2>Research sources</h2>
 
-            <div className="docs-wrapper">
+            <div className="docs-wrapper" onClick={openCompetitorDoc}>
               <div className="doc">
                 <div className="text">Competitive analysis</div>
                 <div className="icon">
@@ -376,62 +342,67 @@ const DefinePage = () => {
         </div>
       </div>
 
-      <div className="define-page-presentation">
+      <div className="define-page-presentation" ref={presiRef}>
         <h1>Mid-Term presentation</h1>
         <div className="wrapper">
           <div className="container-text">
             <h2> Introduction</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              In the middle of the semester we had a Mid-Term presentation where
+              everyone within the noise control project presented their
+              progress. Together with Tanmay we presented our progress to the
+              others.
             </p>
 
             <h2>Question</h2>
-            <p>How can valuable insights be presented to the end users?</p>
+            <p>
+              How can we showcase our work to other teams within the project?
+            </p>
 
             <h2>Method</h2>
             <p className="method">Presentation</p>
 
             <h2>Why</h2>
 
+            <p>
+              This presentation was an opportunity for us to share and
+              communicate our progress to other teams within the project in
+              order to gain valuable perspectives from them and enhance our
+              process.
+            </p>
+
             <h2>How</h2>
+
+            <p>
+              I worked with Tanmay and Wolf to create our presentation. Wolf and
+              Tanmay were responsible for the design and I was responsible for
+              structuring the informational content within the presentation.
+            </p>
 
             <h2>Results</h2>
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-
-            <h2>Conclusion</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-
-            <h2>Research sources</h2>
-
-            <div className="docs-wrapper">
+            <div className="docs-wrapper" onClick={openPresi}>
               <div className="doc">
-                <div className="text">Competitive analysis</div>
+                <div className="text">Mid-Term presentation</div>
+                <div className="icon">
+                  <IoMdOpen size={25} />{" "}
+                </div>
+              </div>
+            </div>
+
+            <h2>Conclusion </h2>
+            <p>
+              I presented the presentation with Tanmay to other teachers and
+              teams within the project. They were impressed with our progress
+              and we received positive feedback which was an indication that we
+              are doing a great job!
+            </p>
+
+            <h2>Related sources</h2>
+
+            <div className="docs-wrapper" onClick={openPresi}>
+              <div className="doc">
+                <div className="text">Mid-Term presentation</div>
                 <div className="icon">
                   <IoMdOpen size={25} />{" "}
                 </div>

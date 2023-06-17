@@ -274,21 +274,6 @@ const GroupProject = () => {
                 User interview
               </p>
             </Link>
-            <Link to="/group-project/empathise#survey">
-              <p>
-                <span>
-                  <AiOutlineCheck size={20} color="#eb6f5c" />
-                </span>
-                Survey
-              </p>
-            </Link>
-
-            <p>
-              These efforts enabled me to contribute meaningful data and
-              perspectives to shape our project. Click the button below to
-              explore my empathize activities and discover the key findings that
-              drove our solution.
-            </p>
 
             <button onClick={navigateToEmpathisePage}>Read more</button>
           </div>
@@ -351,15 +336,6 @@ const GroupProject = () => {
               Mid-Term presentation
             </p>
 
-            <p>
-              By exploring my activities in the Define section, you can gain
-              insights into the problem analysis, persona development, customer
-              journey mapping, and competitor analysis that drove our
-              decision-making process. Click the button below to delve deeper
-              into my contributions during the Define phase and discover how
-              they influenced our solution design.
-            </p>
-
             <button onClick={navigateToDefinePage}>Read more</button>
           </div>
         </div>
@@ -406,17 +382,6 @@ const GroupProject = () => {
               UI Moodboard
             </p>
 
-            <p>
-              These contributions during the Ideate phase played a crucial role
-              in generating and refining ideas, prioritizing features, and
-              defining the overall design direction. By exploring my activities
-              in the Ideate section, you can gain insights into the initial
-              sketches, MoSCoW analysis, User flows, and UI mood board that
-              shaped our ideation process. Click the button below to dive deeper
-              into my contributions during the Ideate phase and discover the
-              creative journey that led to our final solution.
-            </p>
-
             <button onClick={navigateToIdeatePage}>Read more</button>
           </div>
           <div className="container-image">
@@ -460,16 +425,6 @@ const GroupProject = () => {
               High-fidelity prototypes
             </p>
 
-            <p>
-              Through the creation of both low-fidelity and high-fidelity
-              prototypes, we were able to iterate, refine, and validate our
-              design ideas. These prototypes provided valuable insights and user
-              feedback, enabling us to make informed decisions and improve the
-              overall user experience of the smartwatch app. Click the button
-              below to explore my prototype contributions and discover the
-              evolution of our design through the Prototype phase.
-            </p>
-
             <button onClick={navigateToPrototypePage}>Read more</button>
           </div>
         </div>
@@ -496,13 +451,11 @@ const GroupProject = () => {
               </span>
               Usability testing
             </p>
-
             <p>
-              By exploring my activities in the Test section, you can learn more
-              about the usability testing process, the insights gained, and the
-              iterative improvements made based on user feedback. Click the
-              button below to delve deeper into my contributions during the Test
-              phase and discover how user testing shaped our final solution.
+              <span>
+                <AiOutlineCheck size={20} color="#eb6f5c" />
+              </span>
+              Usability testing analysis
             </p>
 
             <button onClick={navigateToTestPage}>Read more</button>
@@ -575,59 +528,11 @@ const GroupProject = () => {
               </p>
             </Link>
 
-            <p>
-              Click the button below to explore the Software System Design
-              section and delve into the details of our system architecture and
-              component selection process.
-            </p>
-
             <button onClick={navigateToSoftwarePage}>Read more</button>
           </div>
         </div>
       </div>
 
-      {/* recommendations section  */}
-      {/* <div className="group-project-recommendations">
-        <h1>Recommendations</h1>
-        <div className="wrapper">
-          <div className="container-text">
-            <p>
-              In the Project Recommendations section, I provide insights and
-              recommendations based on the experience and knowledge gained
-              throughout the project. This section serves as a place to share my
-              thoughts and suggestions for further improvements and future
-              iterations.
-            </p> */}
-
-      {/* <p>
-              To assist the team in gaining valuable insights, I took the
-              initiative to perform various activities such as:
-            </p> */}
-
-      {/* <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Project Recommendations
-            </p> */}
-
-      {/* <p>
-              By exploring the Project Recommendations section, you can gain
-              valuable insights into the lessons learned and the suggested steps
-              to further refine and optimize our project.
-            </p>
-
-            <button onClick={navigateToRecommendationsPage}>Read more</button>
-          </div>
-          <div className="container-image">
-            <img
-              src={recommendationsImg}
-              alt="#"
-              className="design-thinking-img"
-            />
-          </div>
-        </div>
-      </div> */}
       {/* appreciation section  */}
       <div className="group-project-appreciation">
         <h1>Stakeholder appreciation</h1>
