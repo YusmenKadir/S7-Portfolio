@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import literatureStudyImg from "../assets/literatureStudyImg.png";
 import literaturecmdImg from "../assets/cmdliterature.png";
 import { BsSearch, BsKeyboard } from "react-icons/bs";
@@ -20,7 +20,6 @@ import userInterviewQuestions from "../documents/User_Interview_Questions.pdf";
 import { useLocation, useNavigate } from "react-router";
 
 const EmpathisePage = () => {
-  // const [isSticky] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
   const literatureStudyRef = useRef(null);
