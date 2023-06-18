@@ -21,12 +21,14 @@ const PrevNext = (props) => {
         <h1>Thank you for reading!</h1>
       </div>
       <div className="box-right">
-        <GrFormNextLink
-          size={100}
-          onClick={() => navigate(props.nextLink)}
-          className="icon"
-        />
-        <h2>Next: {props.nextText}</h2>
+        {props.nextLink && (
+          <GrFormNextLink
+            size={100}
+            onClick={() => navigate(props.nextLink)}
+            className="icon"
+          />
+        )}
+        {props.nextLink && <h2>Next: {props.nextText}</h2>}
       </div>
     </div>
   );

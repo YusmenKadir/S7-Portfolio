@@ -360,10 +360,10 @@ const IdeatePage = () => {
       </div>
 
       <PrevNext
-        nextLink="/group-project/define"
-        previousLink="/group-project"
-        previousText="Group Project Overview"
-        nextText="Define phase"
+        nextLink="/group-project/prototype"
+        previousLink="/group-project/define"
+        previousText="Define phase"
+        nextText="Prototype phase"
       />
     </div>
   );

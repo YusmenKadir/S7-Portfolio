@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import "../App.scss";
 import PageIntroduction from "./PageIntroduction";
 import PrevNext from "./PrevNext";
@@ -9,35 +9,12 @@ import { useLocation, useNavigate } from "react-router";
 import competirorAnalysisDoc from "../documents/Competitiveanalysis.pdf";
 
 const DefinePage = () => {
-  const [isSticky] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
 
   const personaRef = useRef(null);
   const presiRef = useRef(null);
   const competitorRef = useRef(null);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const processSection = document.querySelector(".project-process");
-  //     const reflectionSection = document.querySelector(".project-reflection");
-
-  //     if (
-  //       window.scrollY >= processSection.offsetTop &&
-  //       window.scrollY < reflectionSection.offsetTop
-  //     ) {
-  //       setIsSticky(true);
-  //     } else {
-  //       setIsSticky(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   useEffect(() => {
     if (location.hash === "#persona" && personaRef.current) {
@@ -75,7 +52,7 @@ const DefinePage = () => {
   };
 
   const openEmpathisePage = () => {
-    navigate("/group-project/empathise#literature-study");
+    navigate("/group-project/empathise#doc-analysis");
   };
   return (
     <div className="define-page">
@@ -83,8 +60,7 @@ const DefinePage = () => {
         pageName="define"
         pageIntroText=" Welcome to the Define phase products page. In this page you will
         find a detailed image of the activities I conducted during the
-        define phase and the key findings that influenced our project. The
-        products showcased justify learning outcome 1. Keep scrolling down and
+        define phase. The products showcased justify learning outcome 1. Keep scrolling down and
         enjoy reading!"
         learningOutcome="Learning outcome 1: User interaction (analysis & advice)"
       />
@@ -195,10 +171,12 @@ const DefinePage = () => {
           <div className="container-text">
             <h2> Introduction</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              During the define phase each member conducted his own competitive
+              analysis in order to gain a better understanding of the existing
+              market landscape and how other apps were addressing a similar
+              design problem. Some of us did it for smartwatch apps whereas
+              others did for mobile apps. At the end our research & analysis was
+              combined together.
             </p>
 
             <h2>Question</h2>
@@ -211,7 +189,28 @@ const DefinePage = () => {
 
             <h2>Why</h2>
 
+            <p>
+              By conducting this competitive analysis I aimed to gain a better
+              understanding of how other apps in this domain showcase certain
+              features and functionalities. This process allowed me to gather
+              inspiration and insights from the existing solutions which I
+              examined and also enabled me to identify some effective design
+              patterns. The competitive analysis equipped me with valuable
+              knowledge which could inform and guide the design of our product
+              resulting in having a product with unique user experience.{" "}
+            </p>
+
             <h2>How</h2>
+
+            <p>
+              I conducted competitive analysis by researching a couple of mobile
+              apps from different web stores: Apple app store, Google Play and
+              Huawei store. Some of them I downloaded on my own phone and
+              browsed through them. I wanted to know what kind of features and
+              functionalities they offer and most importantly how they present
+              information to end users including their layout, navigation and
+              overall user interface.
+            </p>
 
             <h2>Results</h2>
 
@@ -300,17 +299,6 @@ const DefinePage = () => {
               and we received positive feedback which was an indication that we
               are doing a great job!
             </p>
-
-            <h2>Related sources</h2>
-
-            <div className="docs-wrapper" onClick={openPresi}>
-              <div className="doc">
-                <div className="text">Mid-Term presentation</div>
-                <div className="icon">
-                  <IoMdOpen size={25} />{" "}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

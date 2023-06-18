@@ -113,10 +113,10 @@ const ReflectionPage = () => {
       </div>
 
       <PrevNext
-        nextLink="/group-project/recommendations"
-        previousLink="/group-project/test"
-        previousText="Test phase"
-        nextText="Project Recommendations"
+        // nextLink="/group-project/recommendations"
+        previousLink="/group-project/peer-review"
+        previousText="Peer review"
+        // nextText="Project Recommendations"
       />
     </div>
   );

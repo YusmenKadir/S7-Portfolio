@@ -556,10 +556,10 @@ const SoftwarePage = () => {
       </div>
 
       <PrevNext
-        nextLink="/group-project/recommendations"
+        nextLink="/group-project/stakeholder-appreciation"
         previousLink="/group-project/test"
         previousText="Test phase"
-        nextText="Project Recommendations"
+        nextText="Stakeholder appreciation"
       />
     </div>
   );

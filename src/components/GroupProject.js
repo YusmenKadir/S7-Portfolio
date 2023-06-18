@@ -47,10 +47,6 @@ const GroupProject = () => {
     navigate("/group-project/software-system");
   };
 
-  const navigateToRecommendationsPage = () => {
-    navigate("/group-project/project-recommendations");
-  };
-
   const navigateToPeerReviewPage = () => {
     navigate("/group-project/peer-review");
   };
@@ -416,19 +412,6 @@ const GroupProject = () => {
               product.
             </p>
 
-            {/* <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Low-fidelity prototypes
-            </p>
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              High-fidelity prototypes
-            </p> */}
-
             <button onClick={navigateToPrototypePage}>Read more</button>
           </div>
         </div>
@@ -454,7 +437,7 @@ const GroupProject = () => {
                 <span>
                   <AiOutlineCheck size={20} color="#eb6f5c" />
                 </span>
-                Usability testing
+                Usability Testing
               </p>
             </Link>
 
@@ -463,7 +446,7 @@ const GroupProject = () => {
                 <span>
                   <AiOutlineCheck size={20} color="#eb6f5c" />
                 </span>
-                Usability testing analysis
+                Usability Testing Analysis
               </p>
             </Link>
 
@@ -560,21 +543,6 @@ const GroupProject = () => {
               to the project. This section aims to showcase his appreciation and
               evaluation of my performance throughout the project.
             </p>
-
-            {/* <p>Here you can read about the following:</p>
-
-            <p>
-              <span>
-                <AiOutlineCheck size={20} color="#eb6f5c" />
-              </span>
-              Stakeholder appreciation
-            </p> */}
-
-            {/* <p>
-              The feedback from stakeholders and teammates provides valuable
-              insights into how they perceived my role and the impact I had on
-              the project. Click the button below to explore more.
-            </p> */}
 
             <button onClick={navigateToAppreciationPage}>Read more</button>
           </div>

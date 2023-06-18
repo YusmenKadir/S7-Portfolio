@@ -36,15 +36,6 @@ const PeerReviewPage = () => {
             <img src={peerReviewImg} alt="#" />
           </div>
           <div className="container-text">
-            <p className="heading">Introduction</p>
-            <p>
-              In order to get a picture about my performance and contribution as
-              a group member , I created an anonymous survey which I handed to
-              my group members to fill out in a honest and transparent way. I
-              used the results from the survey to structure my key takeaways
-              about the work I did this semester.
-            </p>
-
             <p className="heading">Question</p>
 
             <p>
@@ -56,12 +47,18 @@ const PeerReviewPage = () => {
               Method: <span onClick={navigateToSurveyCmd}> Survey</span>
             </p>
 
-            <p className="heading">How?</p>
+            <p className="heading">How</p>
 
             <p>
               I created a questionnaire in{" "}
               <span onClick={openGoogleForms}>Google forms</span> and handed it
               to my colleagues.
+            </p>
+
+            <p className="heading"> Why</p>
+            <p>
+              In order to get a picture about my performance and contribution as
+              a group member
             </p>
 
             <p className="heading">Results</p>

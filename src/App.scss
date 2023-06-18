@@ -1,4 +1,6 @@
 @import "_ideate";
+@import "_test";
+@import "_prototype";
 
 * {
   box-sizing: border-box;
@@ -1661,7 +1663,7 @@ header .nav-btn {
   }
 
   &-outcomes {
-    width: 80%;
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
