@@ -68,11 +68,10 @@ const IdeatePage = () => {
         pageName="ideate"
         pageIntroText=" Welcome to the Ideate phase products page. In this page you will
          all personal products created as well as products that I contributed to. The
-        products showcased justify learning outcomes 1, 2 and 5. Keep scrolling down and
+        products showcased justify learning outcomes 1 & 2. Keep scrolling down and
         enjoy reading!"
         learningOutcome="Learning outcome 1: User interaction (analysis & advice)"
         learningOutcome2="Learning outcome 2: User interaction (execution & validation) "
-        learningOutcome3="Learning outcome 5: Investigative problem solving"
       />
 
       <div className="ideate-page-moscow" ref={moscowRef}>

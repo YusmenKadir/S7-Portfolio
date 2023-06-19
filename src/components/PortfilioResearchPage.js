@@ -120,7 +120,9 @@ const PortfilioResearchPage = () => {
               user-friendly website?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>
+              Literature Study
+            </p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -135,12 +137,16 @@ const PortfilioResearchPage = () => {
               incorporate web design principles for portfolio website
             </span>
             <h2>Search engine</h2>
-            <p className="search-engine" onClick={openGoogle}>Google</p>
+            <p className="search-engine" onClick={openGoogle}>
+              Google
+            </p>
             <h2>Results</h2>
             <p>
               9 principles of good web design & Z-Shaped Pattern For Reading Web
               Content.
-              <span className="read-more-btn" onClick={openDoc}>Read more</span>
+              <span className="read-more-btn" onClick={openDoc}>
+                Read more
+              </span>
             </p>
             <h2>Conclusion</h2>
             <p>
@@ -166,7 +172,9 @@ const PortfilioResearchPage = () => {
               portfolio website and what are their benefits?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>
+              Literature Study
+            </p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -185,12 +193,16 @@ const PortfilioResearchPage = () => {
               libraries & frameworks for making animations in javascript
             </span>
             <h2>Search engine</h2>
-            <p className="search-engine" onClick={openGoogle}>Google</p>
+            <p className="search-engine" onClick={openGoogle}>
+              Google
+            </p>
             <h2>Results</h2>
             <p>
               React is a popular front-end JavaScript library for building user
               interfaces, and it offers several benefits, including..
-              <span className="read-more-btn" onClick={openDoc}>Read more</span>
+              <span className="read-more-btn" onClick={openDoc}>
+                Read more
+              </span>
             </p>
             <h2>Conclusion</h2>
             <p>
@@ -225,7 +237,9 @@ const PortfilioResearchPage = () => {
               website to create a visually appealing and cohesive design?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>
+              Literature Study
+            </p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -240,14 +254,18 @@ const PortfilioResearchPage = () => {
             </span>
             <span className="chip">colour theory in web design</span>
             <h2>Search engine</h2>
-            <p className="search-engine" onClick={openGoogle}>Google</p>
+            <p className="search-engine" onClick={openGoogle}>
+              Google
+            </p>
             <h2>Results</h2>
             <p>
               The best place to start when creating a colour palette is with the
               primary colour. A palette's primary colour is the star of the
               show. If we follow the 60/30/10 rule the primary colour takes up
               about 60% of the colour on a website.
-              <span className="read-more-btn" onClick={openDoc}>Read more</span>
+              <span className="read-more-btn" onClick={openDoc}>
+                Read more
+              </span>
             </p>
             <h2>Conclusion</h2>
             <p>
@@ -278,7 +296,9 @@ const PortfilioResearchPage = () => {
               effective for my website?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>
+              Literature Study
+            </p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -292,14 +312,18 @@ const PortfilioResearchPage = () => {
               how to pick the right typography in web design?
             </span>
             <h2>Search engine</h2>
-            <p className="search-engine" onClick={openGoogle}>Google</p>
+            <p className="search-engine" onClick={openGoogle}>
+              Google
+            </p>
             <h2>Results</h2>
             <p>
               Typography plays a critical role on any website by ensuring we can
               comfortably read and process all its text-based content. If a
               website’s typography works, we won’t notice. If it fails, chances
               are we’ll bounce off the page..
-              <span className="read-more-btn" onClick={openDoc}>Read more</span>
+              <span className="read-more-btn" onClick={openDoc}>
+                Read more
+              </span>
             </p>
             <h2>Conclusion</h2>
             <p>
@@ -328,7 +352,9 @@ const PortfilioResearchPage = () => {
               enhance the user experience?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>
+              Literature Study
+            </p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -340,14 +366,18 @@ const PortfilioResearchPage = () => {
             <span className="chip">how to improve performance of website?</span>
             <span className="chip">website optimization techniques</span>
             <h2>Search engine</h2>
-            <p className="search-engine" onClick={openGoogle}>Google</p>
+            <p className="search-engine" onClick={openGoogle}>
+              Google
+            </p>
             <h2>Results</h2>
             <p>
               Once you have tested the speed of your website, you can start
               optimizing it. There are a lot of different ways to make your
               website work faster and we created the list of the most effective
               ones..
-              <span className="read-more-btn" onClick={openDoc}>Read more</span>
+              <span className="read-more-btn" onClick={openDoc}>
+                Read more
+              </span>
             </p>
             <h2>Conclusion</h2>
             <p>
@@ -374,7 +404,9 @@ const PortfilioResearchPage = () => {
               What tools should I use to collect data from the usability test?
             </p>
             <h2>Research Method</h2>
-            <p className="research-method" onClick={openLiteratureStudy}>Literature Study</p>
+            <p className="research-method" onClick={openLiteratureStudy}>
+              Literature Study
+            </p>
             <h2>Why</h2>
             <p>Find contextual information, guidance and best practices.</p>
             <h2>How</h2>
@@ -386,7 +418,9 @@ const PortfilioResearchPage = () => {
             <span className="chip">free tools for usability testing</span>
             <span className="chip">best tools for usability testing</span>
             <h2>Search engine</h2>
-            <p className="search-engine" onClick={openGoogle}>Google</p>
+            <p className="search-engine" onClick={openGoogle}>
+              Google
+            </p>
             <h2>Results</h2>
             <p>
               Useberry is a usability testing tool that focuses on multi-method
@@ -396,7 +430,9 @@ const PortfilioResearchPage = () => {
               start up with to run your tests and integrates with all the major
               design tools right off the bat. It’s one of the best website
               testing sites...
-              <span className="read-more-btn" onClick={openDoc}>Read more</span>
+              <span className="read-more-btn" onClick={openDoc}>
+                Read more
+              </span>
             </p>
             <h2>Conclusion</h2>
             <p>

@@ -4,7 +4,7 @@ import PageIntroduction from "./PageIntroduction";
 import PrevNext from "./PrevNext";
 import c1Image from "../assets/MyyC1.png";
 import c2Image from "../assets/MyC2.png";
-import c3ImageGroup from "../assets/MYc3.png";
+import c3ImageGroup from "../assets/C3-the-final-one.png";
 import c3ImageSolo from "../assets/MYC3-SOLO (2).png";
 import fromLuukImg from "../assets/fromLuuk.png";
 import { useLocation } from "react-router";
@@ -368,6 +368,11 @@ const SoftwarePage = () => {
               The API of this device will facilitate the acquisition of valuable
               sound information, enabling the system to make data-driven
               decisions and guide teachers to quieter areas.
+            </p>
+
+            <p>
+              After showing this diagram for one last time to the software team
+              our C3 model was validated and approaved!
             </p>
 
             <p>

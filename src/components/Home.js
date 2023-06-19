@@ -7,7 +7,9 @@ import watchImage from "../assets/Watches.png";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { FaYoutube } from "react-icons/fa";
-import individualProjectReadingGuide from "../documents/Reading Guide Portfolio.pdf";
+import individualProjectReadingGuide from "../documents/Reading-guide-individual-project.pdf";
+import readingGuideGroupProject from "../documents/Reading-guide-group-project.pdf";
+import internationalProjectReadingGuide from "../documents/International Project Reading Guide.pdf";
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -132,7 +134,13 @@ const Home = () => {
               <h2>Group Project</h2>
               <h5>Control of noise</h5>
               <div className="call-to-action">
-                <Link>Reading Guide </Link>
+                <Link
+                  to={readingGuideGroupProject}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Reading Guide{" "}
+                </Link>
                 <Link to="/group-project">Overview</Link>
               </div>
             </div>
@@ -172,7 +180,13 @@ const Home = () => {
               <h2>International Project</h2>
               <h5>Project for Woonbedrijf</h5>
               <div className="call-to-action">
-                <Link>Reading Guide </Link>
+                <Link
+                  to={internationalProjectReadingGuide}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Reading Guide{" "}
+                </Link>
                 <Link to="/international-project">Overview</Link>
               </div>
             </div>

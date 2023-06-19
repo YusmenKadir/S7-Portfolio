@@ -3972,6 +3972,8 @@ header .nav-btn {
           // z-index: 50;
         }
 
+      
+
         img:hover {
           transform: scale(1.1);
         }
@@ -4036,10 +4038,13 @@ header .nav-btn {
         flex-wrap: wrap;
         justify-content: center;
         margin: 50px 0;
+        .special{
+          border: 1px dashed #eb6f5c;
+        }
         // flex-direction: column;
         img {
           transition: all 0.3s ease;
-          margin: 50px 0;
+          margin: 50px 10px;
         }
         img:hover {
           transform: scale(1.1);

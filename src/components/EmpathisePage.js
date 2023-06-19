@@ -85,9 +85,10 @@ const EmpathisePage = () => {
         pageIntroText=" Welcome to the Empathise phase products page. In this page you will
         find a detailed image of the activities I conducted during the
         empathize phase and the key findings that influenced our project. The
-        products showcased justify learning outcome 1. Keep scrolling down and
+        products showcased justify learning outcomes 1 & 5. Keep scrolling down and
         enjoy reading!"
         learningOutcome="Learning outcome 1: User interaction (analysis & advice)"
+        learningOutcome2="Learning outcome 5: Investigative problem solving "
       />
 
       {/* <div className={`sticky-header ${isSticky ? "sticky" : ""}`}>

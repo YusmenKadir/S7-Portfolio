@@ -4,6 +4,12 @@ import gripStudentKlachten from "../documents/Grip Student Klachten.pdf";
 import gripStudentOverigeKlachten from "../documents/Grip Student Overige Klachten.pdf";
 import gripStudentErvaring from "../documents/Grip Student Ervaring Gehoorbescherming.pdf";
 import gripFocusGroups from "../documents/Grip Samevatting Focusgroepen.pdf";
+import projectPlanIndividualProject from "../documents/Project Plan Revised Portfolio Yusmen Kadir.pdf";
+import readingGuideIndividualProject from "../documents/Reading-guide-individual-project.pdf";
+import projectPlanGroupProject from "../documents/Noise-Control-Project-Plan.pdf";
+import projectWorkingAgreement from "../documents/Project-Agreement.pdf";
+import teamCanvasDocument from "../documents/Team Canvas.pdf";
+
 const DocumentsPage = () => {
   const documents = [
     {
@@ -28,43 +34,28 @@ const DocumentsPage = () => {
     },
     {
       id: 5,
-      name: "Project PlanASDASDASD",
-      doc: "",
+      name: "Project Plan Individual Project",
+      doc: projectPlanIndividualProject,
     },
     {
       id: 6,
-      name: "Project PlanASDASDASD",
-      doc: "",
+      name: "Reading Guide Individual Project",
+      doc: readingGuideIndividualProject,
     },
     {
       id: 7,
-      name: "Project PlanASDASDASD",
-      doc: "",
+      name: "Noise Control Project Plan",
+      doc: projectPlanGroupProject,
     },
     {
       id: 7,
-      name: "Project PlanASDASDASD",
-      doc: "",
+      name: "Project Working Agreement",
+      doc: projectWorkingAgreement,
     },
     {
       id: 8,
-      name: "Project PlanASDASDASD",
-      doc: "",
-    },
-    {
-      id: 9,
-      name: "Project PlanASDASDASD",
-      doc: "",
-    },
-    {
-      id: 10,
-      name: "Project PlanASDASDASD",
-      doc: "",
-    },
-    {
-      id: 11,
-      name: "Project PlanASDASDASD",
-      doc: "",
+      name: "Team canvas",
+      doc: teamCanvasDocument,
     },
   ];
 

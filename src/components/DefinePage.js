@@ -60,9 +60,11 @@ const DefinePage = () => {
         pageName="define"
         pageIntroText=" Welcome to the Define phase products page. In this page you will
         find a detailed image of the activities I conducted during the
-        define phase. The products showcased justify learning outcome 1. Keep scrolling down and
+        define phase. The products showcased justify learning outcomes 2, 5 and 7. Keep scrolling down and
         enjoy reading!"
-        learningOutcome="Learning outcome 1: User interaction (analysis & advice)"
+        learningOutcome="Learning outcome 2: User interaction (execution & validation)"
+        learningOutcome2="Learning outcome 5: Investigative problem solving"
+        learningOutcome3="Learning outcome 7: Goal-oriented interaction "
       />
       {/* <div className={`sticky-header ${isSticky ? "sticky" : ""}`}>
         <div>Jump to phase</div>

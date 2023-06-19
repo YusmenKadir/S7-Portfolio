@@ -9,10 +9,6 @@ import stakeholderFeedbackImage from "../assets/stakeHolderFeedback.png";
 import feedbackImage from "../assets/feedbacks.png";
 import brainstormImage from "../assets/pic.jpeg";
 import { AiOutlineCheck } from "react-icons/ai";
-import containerOneImage from "../assets/container1.jpeg";
-import containerTwoImage from "../assets/container2.jpeg";
-import containerThreeImage from "../assets/container3.jpeg";
-import containerFourImage from "../assets/container4.jpeg";
 import moodboardImage from "../assets/moodboard.png";
 import lotiOne from "../assets/loti-app1.png";
 import lotiTwo from "../assets/loti-app2.png";
@@ -666,29 +662,19 @@ const InternationalProject = () => {
           </div>
         </div>
 
-        <div className="containers-container">
-          <h2>3D containers</h2>
-          <div className="images">
-            <img src={containerOneImage} alt="#" />
-            <img src={containerTwoImage} alt="#" />
-            <img src={containerThreeImage} alt="#" />
-            <img src={containerFourImage} alt="#" />
-          </div>
-        </div>
-
         <div className="container-prototype">
           <h2> Mobile Prototype</h2>
           <div className="images">
-            <img src={lotiOne} alt="#" />
-            <img src={lotiTwo} alt="#" />
-            <img src={lotiThree} alt="#" />
+            <img src={lotiOne} alt="#" className="special" />
+            <img src={lotiTwo} alt="#" className="special" />
+            <img src={lotiThree} alt="#" className="special" />
             <img src={lotiFour} alt="#" />
             <img src={lotiFive} alt="#" />
             <img src={lotiSix} alt="#" />
             <img src={lotiSeven} alt="#" />
             <img src={lotiEight} alt="#" />
-            <img src={lotiNine} alt="#" />
-            <img src={lotiTen} alt="#" />
+            <img src={lotiNine} alt="#" className="special" />
+            <img src={lotiTen} alt="#" className="special" />
           </div>
 
           <div className="container-description">
